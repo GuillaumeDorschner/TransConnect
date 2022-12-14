@@ -1,0 +1,15 @@
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/TransConnect
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/TransConnect.deps.json
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/TransConnect.runtimeconfig.json
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/TransConnect.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/TransConnect.pdb
+/Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.csproj.AssemblyReference.cache
+/Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.GeneratedMSBuildEditorConfig.editorconfig
+/Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.AssemblyInfoInputs.cache
+/Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.AssemblyInfo.cs
+/Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.csproj.CoreCompileInputs.cache
+/Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.dll
+/Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/refint/TransConnect.dll
+/Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.pdb
+/Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.genruntimeconfig.cache
+/Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/ref/TransConnect.dll

@@ -1,0 +1,32 @@
+﻿{
+  "salarie": {
+    "PDG": {
+      "numeroSS": 183041186067521,
+      "nom": "Dupond",
+      "prenom": "Pierre",
+      "naissance": "1999-07-26T00:00:00",
+      "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+      "adresse mail": "pierre.dupond@gmail.com",
+      "portable": "0696202581",
+      "arrivee": "2010-07-26T00:00:00",
+      "poste": "PDG",
+      "salaire": 10000,
+      "enfant": [
+        "djkjdf",
+        :,
+        {
+
+        },
+        "dqsdq",
+        :,
+        "qdqs",
+        :
+      ]
+
+    }},
+  "commandes": {
+  },
+  "clients": {
+  }
+
+  }
