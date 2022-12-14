@@ -1,32 +1,285 @@
 ﻿{
   "salarie": {
-    "PDG": {
-      "numeroSS": 183041186067521,
-      "nom": "Dupond",
-      "prenom": "Pierre",
-      "naissance": "1999-07-26T00:00:00",
-      "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-      "adresse mail": "pierre.dupond@gmail.com",
-      "portable": "0696202581",
-      "arrivee": "2010-07-26T00:00:00",
-      "poste": "PDG",
-      "salaire": 10000,
-      "enfant": [
-        "djkjdf",
-        :,
-        {
-
-        },
-        "dqsdq",
-        :,
-        "qdqs",
-        :
-      ]
-
-    }},
-  "commandes": {
-  },
-  "clients": {
+    "numeroSS": 183041186067521,
+    "titre": "Mr",
+    "nom": "Dupond",
+    "prenom": "Pierre",
+    "naissance": "1999-07-26T00:00:00",
+    "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+    "adresse mail": "pierre.dupond@gmail.com",
+    "portable": "0696202581",
+    "arrivee": "2010-07-26T00:00:00",
+    "poste": "Directeur Général",
+    "salaire": 10000,
+    "enfant": [
+      {
+        "salarie": {
+          "numeroSS": 183041186067521,
+          "titre": "Mme",
+          "nom": "Fiesta",
+          "prenom": "Marie",
+          "naissance": "1999-07-26T00:00:00",
+          "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+          "adresse mail": "pierre.dupond@gmail.com",
+          "portable": "0696202581",
+          "arrivee": "2010-07-26T00:00:00",
+          "poste": "Directeur Commercial",
+          "salaire": 1000,
+          "enfant": [
+            {
+              "salarie": {
+                "numeroSS": 183041186067521,
+                "titre": "Mr",
+                "nom": "Forge",
+                "prenom": "Pierre",
+                "naissance": "1999-07-26T00:00:00",
+                "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+                "adresse mail": "pierre.dupond@gmail.com",
+                "portable": "0696202581",
+                "arrivee": "2010-07-26T00:00:00",
+                "poste": "Directeur Commercial",
+                "salaire": 1000
+              }
+            },
+            {
+              "salarie": {
+                "numeroSS": 183041186067521,
+                "titre": "Mme",
+                "nom": "Ferni",
+                "prenom": "jacqueline",
+                "naissance": "1999-07-26T00:00:00",
+                "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+                "adresse mail": "pierre.dupond@gmail.com",
+                "portable": "0696202581",
+                "arrivee": "2010-07-26T00:00:00",
+                "poste": "Directeur Commercial",
+                "salaire": 1000
+              }
+            }
+          ]
+        }
+      },
+      {
+        "salarie": {
+          "numeroSS": 183041186067521,
+          "titre": "Mr",
+          "nom": "Fetard",
+          "prenom": "Jean",
+          "naissance": "1999-07-26T00:00:00",
+          "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+          "adresse mail": "pierre.dupond@gmail.com",
+          "portable": "0696202581",
+          "arrivee": "2010-07-26T00:00:00",
+          "poste": "Directeur des operations",
+          "salaire": 1000,
+          "enfant": [
+            {
+              "salarie": {
+                "numeroSS": 183041186067521,
+                "titre": "Mr",
+                "nom": "Royal",
+                "prenom": "JSP",
+                "naissance": "1999-07-26T00:00:00",
+                "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+                "adresse mail": "pierre.dupond@gmail.com",
+                "portable": "0696202581",
+                "arrivee": "2010-07-26T00:00:00",
+                "poste": "Chef equipe",
+                "salaire": 1000,
+                "enfant": [
+                  {
+                    "salarie": {
+                      "numeroSS": 183041186067521,
+                      "titre": "Mr",
+                      "nom": "Romu",
+                      "prenom": "JSP",
+                      "naissance": "1999-07-26T00:00:00",
+                      "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+                      "adresse mail": "pierre.dupond@gmail.com",
+                      "portable": "0696202581",
+                      "arrivee": "2010-07-26T00:00:00",
+                      "poste": "Chauffeur",
+                      "salaire": 1000,
+                    }
+                  },
+                  {
+                    "salarie": {
+                      "numeroSS": 183041186067521,
+                      "titre": "Mr",
+                      "nom": "Romi",
+                      "prenom": "JSP",
+                      "naissance": "1999-07-26T00:00:00",
+                      "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+                      "adresse mail": "pierre.dupond@gmail.com",
+                      "portable": "0696202581",
+                      "arrivee": "2010-07-26T00:00:00",
+                      "poste": "Chauffeur",
+                      "salaire": 1000,
+                    }
+                  },
+                  {
+                    "salarie": {
+                      "numeroSS": 183041186067521,
+                      "titre": "Mr",
+                      "nom": "Roma",
+                      "prenom": "JSP",
+                      "naissance": "1999-07-26T00:00:00",
+                      "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+                      "adresse mail": "pierre.dupond@gmail.com",
+                      "portable": "0696202581",
+                      "arrivee": "2010-07-26T00:00:00",
+                      "poste": "Chauffeur",
+                      "salaire": 1000,
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "salarie": {
+                "numeroSS": 183041186067521,
+                "titre": "Mme",
+                "nom": "Prince",
+                "prenom": "JSP",
+                "naissance": "1999-07-26T00:00:00",
+                "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+                "adresse mail": "pierre.dupond@gmail.com",
+                "portable": "0696202581",
+                "arrivee": "2010-07-26T00:00:00",
+                "poste": "Chef d equipe",
+                "salaire": 1000,
+                "enfant": [
+                  {
+                    "salarie": {
+                      "numeroSS": 183041186067521,
+                      "titre": "Mme",
+                      "nom": "Rome",
+                      "prenom": "JSP",
+                      "naissance": "1999-07-26T00:00:00",
+                      "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+                      "adresse mail": "pierre.dupond@gmail.com",
+                      "portable": "0696202581",
+                      "arrivee": "2010-07-26T00:00:00",
+                      "poste": "Chauffeur",
+                      "salaire": 1000,
+                    }
+                  },
+                  {
+                    "salarie": {
+                      "numeroSS": 183041186067521,
+                      "titre": "Mme",
+                      "nom": "Rimou",
+                      "prenom": "JSP",
+                      "naissance": "1999-07-26T00:00:00",
+                      "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+                      "adresse mail": "pierre.dupond@gmail.com",
+                      "portable": "0696202581",
+                      "arrivee": "2010-07-26T00:00:00",
+                      "poste": "Chauffeur",
+                      "salaire": 1000,
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "salarie": {
+          "numeroSS": 183041186067521,
+          "titre": "Mme",
+          "nom": "Joyeuse",
+          "prenom": "Marie",
+          "naissance": "1999-07-26T00:00:00",
+          "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+          "adresse mail": "pierre.dupond@gmail.com",
+          "portable": "0696202581",
+          "arrivee": "2010-07-26T00:00:00",
+          "poste": "Directice des RH",
+          "salaire": 1000,
+          "enfant": [
+            {
+              "salarie": {
+                "numeroSS": 183041186067521,
+                "titre": "Mme",
+                "nom": "Couleur",
+                "prenom": "Pierre",
+                "naissance": "1999-07-26T00:00:00",
+                "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+                "adresse mail": "pierre.dupond@gmail.com",
+                "portable": "0696202581",
+                "arrivee": "2010-07-26T00:00:00",
+                "poste": "Formation",
+                "salaire": 1000
+              }
+            },
+            {
+              "salarie": {
+                "numeroSS": 183041186067521,
+                "titre": "Mme",
+                "nom": "ToutleMonde",
+                "prenom": "jacqueline",
+                "naissance": "1999-07-26T00:00:00",
+                "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+                "adresse mail": "pierre.dupond@gmail.com",
+                "portable": "0696202581",
+                "arrivee": "2010-07-26T00:00:00",
+                "poste": "Contracts",
+                "salaire": 1000
+              }
+            }
+          ]
+        }
+      },
+      {
+        "salarie": {
+          "numeroSS": 183041186067521,
+          "titre": "Mr",
+          "nom": "GripSous",
+          "prenom": "JSP",
+          "naissance": "1999-07-26T00:00:00",
+          "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+          "adresse mail": "pierre.dupond@gmail.com",
+          "portable": "0696202581",
+          "arrivee": "2010-07-26T00:00:00",
+          "poste": "Directeur Financier",
+          "salaire": 1000,
+          "enfant": [
+            {
+              "salarie": {
+                "numeroSS": 183041186067521,
+                "titre": "Mr",
+                "nom": "Picsou",
+                "prenom": "JSP",
+                "naissance": "1999-07-26T00:00:00",
+                "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+                "adresse mail": "pierre.dupond@gmail.com",
+                "portable": "0696202581",
+                "arrivee": "2010-07-26T00:00:00",
+                "poste": "Direction Comptable",
+                "salaire": 1000,
+                "enfant": []
+              }
+            },
+            {
+              "salarie": {
+                "numeroSS": 183041186067521,
+                "titre": "Mr",
+                "nom": "GrosSous",
+                "prenom": "JSP",
+                "naissance": "1999-07-26T00:00:00",
+                "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+                "adresse mail": "pierre.dupond@gmail.com",
+                "portable": "0696202581",
+                "arrivee": "2010-07-26T00:00:00",
+                "poste": "Controleur de Gestion",
+                "salaire": 1000,
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
-
-  }
+}
