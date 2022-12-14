@@ -6,6 +6,7 @@ namespace TransConnect
 		//Collection de clients en mémoire = static List<Client> dans le main surement
 		protected List<Commande> commande;
 		public delegate int typeDeTri();
+		public delegate int Tri(Client a, Client b);
 
 		public Client( string nom, string prenom, DateTime naissance, string adressePostale, string adresseMail, int portable,
             List<Commande> commande) : base(nom, prenom, naissance, adressePostale, adresseMail, portable)
@@ -43,14 +44,14 @@ namespace TransConnect
 			return a.adressePostale.CompareTo(b.adressePostale);
         }
 
-        public int Tri3(Client a, Client b)
+        public static int Tri3(Client a, Client b)
         {
             return a.achatsCumule().CompareTo(b.achatsCumule());
         }
 
-		public int typeDeTri1(ITris tri, Client a, Client b)
+		public int typeDeTri1(Tri tri, Client a, Client b)
 		{
-			return Tri1(a, b);
+			return tri(a, b);
 		}
     }
 }
