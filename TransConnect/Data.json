@@ -1,241 +1,181 @@
 ﻿{
-  "salarie": {
-    "numeroSS": 186041023200214,
-    "titre": "Mr",
-    "nom": "Dupond",
-    "prenom": "Pierre",
-    "naissance": "1989-07-26T00:00:00",
+  "numeroSS": 18601023,
+  "nom": "Dupond",
+  "prenom": "Pierre",
+  "naissance": "1989-07-26T00:00:00",
+  "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+  "adresse mail": "pierre.dupond@gmail.com",
+  "portable": "0860536528",
+  "arrivee": "2010-07-26T00:00:00",
+  "poste": "Directeur Général",
+  "salaire": 10000,
+  "enfant": {
+    "numeroSS": 25905701,
+    "nom": "Fiesta",
+    "prenom": "Marie",
+    "naissance": "1993-07-26T00:00:00",
     "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-    "adresse mail": "pierre.dupond@gmail.com",
-    "portable": "0860536528",
+    "adresse mail": "fiesta.marie@gmail.com",
+    "portable": "0649252855",
     "arrivee": "2010-07-26T00:00:00",
-    "poste": "Directeur Général",
-    "salaire": 10000,
-    "enfant": [
-      {
-        "salarie": {
-          "numeroSS": 259035701313141,
-          "titre": "Mme",
-          "nom": "Fiesta",
-          "prenom": "Marie",
-          "naissance": "1993-07-26T00:00:00",
-          "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-          "adresse mail": "fiesta.marie@gmail.com",
-          "portable": "0649252855",
-          "arrivee": "2010-07-26T00:00:00",
-          "poste": "Directeur Commercial",
-          "salaire": 1000,
-          "enfant": [
-            {
-              "salarie": {
-                "numeroSS": 151053904586979,
-                "titre": "Mr",
-                "nom": "Forge",
-                "prenom": "Pierre",
-                "naissance": "1999-07-26T00:00:00",
-                "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-                "adresse mail": "forge.pierre@gmail.com",
-                "portable": "0696200081",
-                "arrivee": "2010-07-26T00:00:00",
-                "poste": "Directeur Commercial",
-                "salaire": 1000
-              }
-            },
-            {
-              "salarie": {
-                "numeroSS": 280038350221843,
-                "titre": "Mme",
-                "nom": "Ferni",
-                "prenom": "jacqueline",
-                "naissance": "1999-07-26T00:00:00",
-                "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-                "adresse mail": "ferni.jacqueline@gmail.com",
-                "portable": "0691202581",
-                "arrivee": "2010-07-26T00:00:00",
-                "poste": "Directeur Commercial",
-                "salaire": 1000
-              }
-            }
-          ]
-        }
-      },
-      {
-        "salarie": {
-          "numeroSS": 148039519238492,
-          "titre": "Mr",
-          "nom": "Fetard",
-          "prenom": "Jean",
+    "poste": "Directeur Commercial",
+    "salaire": 1000,
+    "enfant": {
+      "numeroSS": 15103904,
+      "nom": "Forge",
+      "prenom": "Pierre",
+      "naissance": "1999-07-26T00:00:00",
+      "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+      "adresse mail": "forge.pierre@gmail.com",
+      "portable": "0696200081",
+      "arrivee": "2010-07-26T00:00:00",
+      "poste": "Directeur Commercial",
+      "salaire": 1000,
+      "frere": {
+        "numeroSS": 28008350,
+        "nom": "Ferni",
+        "prenom": "jacqueline",
+        "naissance": "1999-07-26T00:00:00",
+        "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+        "adresse mail": "ferni.jacqueline@gmail.com",
+        "portable": "0691202581",
+        "arrivee": "2010-07-26T00:00:00",
+        "poste": "Directeur Commercial",
+        "salaire": 1000
+      }
+    },
+    "frere": {
+      "numeroSS": 14809519,
+      "nom": "Fetard",
+      "prenom": "Jean",
+      "naissance": "1999-07-26T00:00:00",
+      "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+      "adresse mail": "fetard.jeand@gmail.com",
+      "portable": "0696233581",
+      "arrivee": "2010-07-26T00:00:00",
+      "poste": "Directeur des operations",
+      "salaire": 1000,
+      "enfant": {
+        "numeroSS": 19408186,
+        "nom": "Royal",
+        "prenom": "Theodore",
+        "naissance": "1999-07-26T00:00:00",
+        "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+        "adresse mail": "royal.theodore@gmail.com",
+        "portable": "0641202581",
+        "arrivee": "2010-07-26T00:00:00",
+        "poste": "Chef equipe",
+        "salaire": 1000,
+        "enfant": {
+          "numeroSS": 14718489,
+          "nom": "Romu",
+          "prenom": "Pierpont",
           "naissance": "1999-07-26T00:00:00",
           "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-          "adresse mail": "fetard.jeand@gmail.com",
-          "portable": "0696233581",
+          "adresse mail": "romu.pierpont@gmail.com",
+          "portable": "0696992581",
           "arrivee": "2010-07-26T00:00:00",
-          "poste": "Directeur des operations",
+          "poste": "Chauffeur",
           "salaire": 1000,
-          "enfant": [
-            {
-              "salarie": {
-                "numeroSS": 194048186859947,
-                "titre": "Mr",
-                "nom": "Royal",
-                "prenom": "Theodore",
-                "naissance": "1999-07-26T00:00:00",
-                "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-                "adresse mail": "royal.theodore@gmail.com",
-                "portable": "0641202581",
-                "arrivee": "2010-07-26T00:00:00",
-                "poste": "Chef equipe",
-                "salaire": 1000,
-                "enfant": [
-                  {
-                    "salarie": {
-                      "numeroSS": 147108489406879,
-                      "titre": "Mr",
-                      "nom": "Romu",
-                      "prenom": "Pierpont",
-                      "naissance": "1999-07-26T00:00:00",
-                      "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-                      "adresse mail": "romu.pierpont@gmail.com",
-                      "portable": "0696992581",
-                      "arrivee": "2010-07-26T00:00:00",
-                      "poste": "Chauffeur",
-                      "salaire": 1000,
-                    }
-                  },
-                  {
-                    "salarie": {
-                      "numeroSS": 180028131994940,
-                      "titre": "Mr",
-                      "nom": "Romi",
-                      "prenom": "Chandler",
-                      "naissance": "1999-07-26T00:00:00",
-                      "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-                      "adresse mail": "romi.chandler@gmail.com",
-                      "portable": "0697288258",
-                      "arrivee": "2010-07-26T00:00:00",
-                      "poste": "Chauffeur",
-                      "salaire": 1000,
-                    }
-                  },
-                  {
-                    "salarie": {
-                      "numeroSS": 194094088566279,
-                      "titre": "Mr",
-                      "nom": "Roma",
-                      "prenom": "Léon",
-                      "naissance": "1994-02-26T00:00:00",
-                      "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-                      "adresse mail": "roma.leon@gmail.com",
-                      "portable": "0696202581",
-                      "arrivee": "2010-07-26T00:00:00",
-                      "poste": "Chauffeur",
-                      "salaire": 1000
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "salarie": {
-                "numeroSS": 287120778958104,
-                "titre": "Mme",
-                "nom": "Prince",
-                "prenom": "Odette",
-                "naissance": "1987-12-09T00:00:00",
-                "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-                "adresse mail": "prince.odette@gmail.com",
-                "portable": "0634202581",
-                "arrivee": "2010-07-26T00:00:00",
-                "poste": "Chef d equipe",
-                "salaire": 1000,
-                "enfant": [
-                  {
-                    "salarie": {
-                      "numeroSS": 269067141537908,
-                      "titre": "Mme",
-                      "nom": "Rome",
-                      "prenom": "Allyriane",
-                      "naissance": "1969-05-28T00:00:00",
-                      "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-                      "adresse mail": "rome.allyriane@gmail.com",
-                      "portable": "0696202581",
-                      "arrivee": "2010-07-26T00:00:00",
-                      "poste": "Chauffeur",
-                      "salaire": 1000,
-                    }
-                  },
-                  {
-                    "salarie": {
-                      "numeroSS": 275083805072190,
-                      "titre": "Mme",
-                      "nom": "Rimou",
-                      "prenom": "Amedee",
-                      "naissance": "1975-08-16T00:00:00",
-                      "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-                      "adresse mail": "Rimou.amedee@gmail.com",
-                      "portable": "0770820109",
-                      "arrivee": "2010-07-26T00:00:00",
-                      "poste": "Chauffeur",
-                      "salaire": 1000,
-                    }
-                  }
-                ]
-              }
+          "frere": {
+            "numeroSS": 18008131,
+            "nom": "Romi",
+            "prenom": "Chandler",
+            "naissance": "1999-07-26T00:00:00",
+            "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+            "adresse mail": "romi.chandler@gmail.com",
+            "portable": "0697288258",
+            "arrivee": "2010-07-26T00:00:00",
+            "poste": "Chauffeur",
+            "salaire": 1000,
+            "frere": {
+              "numeroSS": 19404088,
+              "nom": "Roma",
+              "prenom": "Léon",
+              "naissance": "1994-02-26T00:00:00",
+              "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+              "adresse mail": "roma.leon@gmail.com",
+              "portable": "0696202581",
+              "arrivee": "2010-07-26T00:00:00",
+              "poste": "Chauffeur",
+              "salaire": 1000
             }
-          ]
+          }
+        },
+        "frere": {
+          "numeroSS": 28710778,
+          "nom": "Prince",
+          "prenom": "Odette",
+          "naissance": "1987-12-09T00:00:00",
+          "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+          "adresse mail": "prince.odette@gmail.com",
+          "portable": "0634202581",
+          "arrivee": "2010-07-26T00:00:00",
+          "poste": "Chef d equipe",
+          "salaire": 1000,
+          "enfant": {
+            "numeroSS": 26907141,
+            "nom": "Rome",
+            "prenom": "Allyriane",
+            "naissance": "1969-05-28T00:00:00",
+            "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+            "adresse mail": "rome.allyriane@gmail.com",
+            "portable": "0696202581",
+            "arrivee": "2010-07-26T00:00:00",
+            "poste": "Chauffeur",
+            "salaire": 1000,
+            "frere": {
+              "numeroSS": 27503805,
+              "nom": "Rimou",
+              "prenom": "Amedee",
+              "naissance": "1975-08-16T00:00:00",
+              "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+              "adresse mail": "Rimou.amedee@gmail.com",
+              "portable": "0770820109",
+              "arrivee": "2010-07-26T00:00:00",
+              "poste": "Chauffeur",
+              "salaire": 1000,
+            }
+          }
         }
       },
-      {
-        "salarie": {
-          "numeroSS": 260035420234212,
-          "titre": "Mme",
-          "nom": "Joyeuse",
-          "prenom": "Marie",
+      "frere": {
+        "numeroSS": 26005420,
+        "nom": "Joyeuse",
+        "prenom": "Marie",
+        "naissance": "1999-07-26T00:00:00",
+        "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+        "adresse mail": "joyeuse.marie@gmail.com",
+        "portable": "0602523345",
+        "arrivee": "2010-07-26T00:00:00",
+        "poste": "Directice des RH",
+        "salaire": 1000,
+        "enfant": {
+          "numeroSS": 27118249,
+          "nom": "Couleur",
+          "prenom": "Pierre",
           "naissance": "1999-07-26T00:00:00",
           "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-          "adresse mail": "joyeuse.marie@gmail.com",
-          "portable": "0602523345",
+          "adresse mail": "couleur.pierre@gmail.com",
+          "portable": "0696202581",
           "arrivee": "2010-07-26T00:00:00",
-          "poste": "Directice des RH",
+          "poste": "Formation",
           "salaire": 1000,
-          "enfant": [
-            {
-              "salarie": {
-                "numeroSS": 271118249971142,
-                "titre": "Mme",
-                "nom": "Couleur",
-                "prenom": "Pierre",
-                "naissance": "1999-07-26T00:00:00",
-                "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-                "adresse mail": "couleur.pierre@gmail.com",
-                "portable": "0696202581",
-                "arrivee": "2010-07-26T00:00:00",
-                "poste": "Formation",
-                "salaire": 1000
-              }
-            },
-            {
-              "salarie": {
-                "numeroSS": 183041186067521,
-                "titre": "Mme",
-                "nom": "ToutleMonde",
-                "prenom": "jacqueline",
-                "naissance": "1999-07-26T00:00:00",
-                "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-                "adresse mail": "toutlemonde.jacqueline@gmail.com",
-                "portable": "0678618588",
-                "arrivee": "2010-07-26T00:00:00",
-                "poste": "Contracts",
-                "salaire": 1000
-              }
-            }
-          ]
-        }
-      },
-      {
-        "salarie": {
-          "numeroSS": 192069085473029,
-          "titre": "Mr",
+          "frere": {
+            "numeroSS": 18301186,
+            "nom": "ToutleMonde",
+            "prenom": "jacqueline",
+            "naissance": "1999-07-26T00:00:00",
+            "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+            "adresse mail": "toutlemonde.jacqueline@gmail.com",
+            "portable": "0678618588",
+            "arrivee": "2010-07-26T00:00:00",
+            "poste": "Contracts",
+            "salaire": 1000
+          }
+        },
+        "frere": {
+          "numeroSS": 19209085,
           "nom": "GripSous",
           "prenom": "Bellamy",
           "naissance": "1999-07-26T00:00:00",
@@ -245,27 +185,30 @@
           "arrivee": "2010-07-26T00:00:00",
           "poste": "Directeur Financier",
           "salaire": 1000,
-          "enfant": [
-            {
-              "salarie": {
-                "numeroSS": 151102627699451,
-                "titre": "Mr",
-                "nom": "Picsou",
-                "prenom": "Adrien",
-                "naissance": "2001-07-26T00:00:00",
-                "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
-                "adresse mail": "picsou.adrien@gmail.com",
-                "portable": "0696202581",
-                "arrivee": "2010-07-26T00:00:00",
-                "poste": "Direction Comptable",
-                "salaire": 1000,
-                "enfant": []
-              }
-            },
-            {
-              "salarie": {
-                "numeroSS": 195125146521821,
-                "titre": "Mr",
+          "enfant": {
+            "numeroSS": 15112627,
+            "nom": "Picsou",
+            "prenom": "Adrien",
+            "naissance": "2001-07-26T00:00:00",
+            "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+            "adresse mail": "picsou.adrien@gmail.com",
+            "portable": "0696202581",
+            "arrivee": "2010-07-26T00:00:00",
+            "poste": "Direction Comptable",
+            "salaire": 1000,
+            "enfant": {
+              "numeroSS": 19515146,
+              "nom": "GrosSous",
+              "prenom": "Byron",
+              "naissance": "1992-07-26T00:00:00",
+              "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+              "adresse mail": "grossous.byon@gmail.com",
+              "portable": "0159503534",
+              "arrivee": "2010-07-26T00:00:00",
+              "poste": "Controleur de Gestion",
+              "salaire": 1000,
+              "frere": {
+                "numeroSS": 19515146,
                 "nom": "GrosSous",
                 "prenom": "Byron",
                 "naissance": "1992-07-26T00:00:00",
@@ -274,12 +217,24 @@
                 "portable": "0159503534",
                 "arrivee": "2010-07-26T00:00:00",
                 "poste": "Controleur de Gestion",
-                "salaire": 1000,
+                "salaire": 1000
               }
+            },
+            "frere": {
+              "numeroSS": 19515146,
+              "nom": "GrosSous",
+              "prenom": "Byron",
+              "naissance": "1992-07-26T00:00:00",
+              "adresse postale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+              "adresse mail": "grossous.byon@gmail.com",
+              "portable": "0159503534",
+              "arrivee": "2010-07-26T00:00:00",
+              "poste": "Controleur de Gestion",
+              "salaire": 1000,
             }
-          ]
+          }
         }
       }
-    ]
+    }
   }
 }

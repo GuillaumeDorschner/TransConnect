@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace TransConnect
 {
@@ -6,8 +7,14 @@ namespace TransConnect
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Non");
-            
+
+            // json to object
+            string json = File.ReadAllText("../../../data.json");
+
+            Salarie salarie = Newtonsoft.Json.JsonConvert.DeserializeObject<Salarie>(json);
+
+            Organigramme Org = new Organigramme(salarie);
+            Org.Afficher();
         }
     }
 }

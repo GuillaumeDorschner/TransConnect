@@ -19,7 +19,6 @@ namespace TransConnect
 
         public void Afficher()
         {
-            Console.WriteLine("----- Affichage de l'organigramme -----\n\n");
 
             if (this.pdg == null)
             {
