@@ -1,0 +1,34 @@
+[
+    {
+        "Nom": "Margand",
+        "Prenom": "Stéphanie",
+        "Naissance": "1968-12-04T00:00:00",
+        "AdressePostale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+        "AdresseMail": "StephanieMargand@jourrapide.com",
+        "Portable": "0369139330"
+    },
+    {
+        "Nom": "Patenaude",
+        "Prenom": "Laure",
+        "Naissance": "1941-11-28T00:00:00",
+        "AdressePostale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+        "AdresseMail": "LaurePatenaude@dayrep.com",
+        "Portable": "0155479195"
+    },
+    {
+        "Nom": "Authier",
+        "Prenom": "Ernest",
+        "Naissance": "1972-06-19T00:00:00",
+        "AdressePostale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+        "AdresseMail": "ErnestAuthier@armyspy.com",
+        "Portable": "0543843947"
+    },
+    {
+        "Nom": "Abril",
+        "Prenom": "Warrane",
+        "Naissance": "1989-07-26T00:00:00",
+        "AdressePostale": "19, place de Miremont 47300 VILLENEUVE-SUR-LOT",
+        "AdresseMail": "pierre.dupond@gmail.com",
+        "Portable": "016391645        "
+    }
+]
