@@ -7,6 +7,14 @@ namespace TransConnect
     {
         static void Main(string[] args)
         {
+            // client json to client object
+            List<Client> l1 = Client.FileToObj("../../../dataClient.json");
+
+            foreach (Client client in l1)
+                Console.WriteLine(client);
+
+            // client object to client json
+            Client.ObjToFile(l1, "../../../testClient.json");
 
             // json to object
             string json = File.ReadAllText("../../../data.json");

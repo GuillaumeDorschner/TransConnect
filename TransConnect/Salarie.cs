@@ -13,7 +13,7 @@ namespace TransConnect
         protected Salarie frere;
         protected Salarie enfant;
 
-        public Salarie(int numeroSS, string nom, string prenom, DateTime naissance, string adressePostale, string adresseMail, int portable,
+        public Salarie(int numeroSS, string nom, string prenom, DateTime naissance, string adressePostale, string adresseMail, string portable,
             DateTime arrivee, string poste, int salaire) : base(nom, prenom, naissance, adressePostale, adresseMail, portable)
         {
             this.numeroSS = numeroSS;
