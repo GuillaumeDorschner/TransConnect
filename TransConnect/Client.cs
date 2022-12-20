@@ -1,10 +1,10 @@
 ﻿using System;
 namespace TransConnect
 {
-	public class Client : Personne , ITris
-	{
-		//Collection de clients en mémoire = static List<Client> dans le main surement
-		protected List<Commande> commande;
+    public class Client : Personne, ITris
+    {
+        //Collection de clients en mémoire = static List<Client> dans le main surement
+        protected List<Commande> commande;
 
         public Client(string nom, string prenom, DateTime naissance, string adressePostale, string adresseMail, string portable,
             List<Commande> commande) : base(nom, prenom, naissance, adressePostale, adresseMail, portable)
@@ -12,35 +12,35 @@ namespace TransConnect
             this.commande = commande;
         }
 
-<<<<<<< Updated upstream
-		List<Commande> Commande
-		{
-			get { return commande; }
-		}
 
-		public int achatsCumule()
-		{
-			int sum = 0;
-			foreach(Commande i in commande)
-			{
-				sum += i.Prix;
-			}
-			return sum;
-		}
+        List<Commande> Commande
+        {
+            get { return commande; }
+        }
 
-		public int Tri1(Client a, Client b)
-		{
-			int x = a.Nom.CompareTo(b.Nom);
-			if(x==0)
-			{
-				x = x + a.Prenom.CompareTo(b.Prenom);
-			}
-			return x;
-		}
+        public int achatsCumule()
+        {
+            int sum = 0;
+            foreach (Commande i in commande)
+            {
+                sum += i.Prix;
+            }
+            return sum;
+        }
+
+        public int Tri1(Client a, Client b)
+        {
+            int x = a.Nom.CompareTo(b.Nom);
+            if (x == 0)
+            {
+                x = x + a.Prenom.CompareTo(b.Prenom);
+            }
+            return x;
+        }
 
         public int Tri2(Client a, Client b)
         {
-			return a.adressePostale.CompareTo(b.adressePostale);
+            return a.adressePostale.CompareTo(b.adressePostale);
         }
 
         public static int Tri3(Client a, Client b)
@@ -48,11 +48,11 @@ namespace TransConnect
             return a.achatsCumule().CompareTo(b.achatsCumule());
         }
 
-		public int typeDeTri1(Tri tri, Client a, Client b)
-		{
-			return tri(a, b);
-		}
-=======
+        public int typeDeTri1(Tri tri, Client a, Client b)
+        {
+            return tri(a, b);
+        }
+
         List<Commande> Commande
         {
             get { return commande; }
@@ -77,8 +77,5 @@ namespace TransConnect
         {
             return base.ToString() + " " + commande;
         }
->>>>>>> Stashed changes
     }
 }
-
-
