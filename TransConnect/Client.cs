@@ -1,19 +1,10 @@
 ﻿using System;
 namespace TransConnect
 {
-<<<<<<< Updated upstream
 	public class Client : Personne , ITris
 	{
 		//Collection de clients en mémoire = static List<Client> dans le main surement
 		protected List<Commande> commande;
-		public delegate int typeDeTri();
-		public delegate int Tri(Client a, Client b);
-=======
-    public class Client : Personne
-    {
-        //Collection de clients en mémoire = static List<Client> dans le main surement
-        protected List<Commande> commande;
->>>>>>> Stashed changes
 
         public Client(string nom, string prenom, DateTime naissance, string adressePostale, string adresseMail, string portable,
             List<Commande> commande) : base(nom, prenom, naissance, adressePostale, adresseMail, portable)
