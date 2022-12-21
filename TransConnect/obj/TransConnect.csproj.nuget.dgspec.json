@@ -1,26 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/valentin/Projects/TransConnect/TransConnect/TransConnect.csproj": {}
+    "C:\\Users\\valen\\OneDrive\\Documents\\A3 ESILV\\C#\\TransConnect\\TransConnect\\TransConnect.csproj": {}
   },
   "projects": {
-    "/Users/valentin/Projects/TransConnect/TransConnect/TransConnect.csproj": {
+    "C:\\Users\\valen\\OneDrive\\Documents\\A3 ESILV\\C#\\TransConnect\\TransConnect\\TransConnect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/valentin/Projects/TransConnect/TransConnect/TransConnect.csproj",
+        "projectUniqueName": "C:\\Users\\valen\\OneDrive\\Documents\\A3 ESILV\\C#\\TransConnect\\TransConnect\\TransConnect.csproj",
         "projectName": "TransConnect",
-        "projectPath": "/Users/valentin/Projects/TransConnect/TransConnect/TransConnect.csproj",
-        "packagesPath": "/Users/valentin/.nuget/packages/",
-        "outputPath": "/Users/valentin/Projects/TransConnect/TransConnect/obj/",
+        "projectPath": "C:\\Users\\valen\\OneDrive\\Documents\\A3 ESILV\\C#\\TransConnect\\TransConnect\\TransConnect.csproj",
+        "packagesPath": "C:\\Users\\valen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\valen\\OneDrive\\Documents\\A3 ESILV\\C#\\TransConnect\\TransConnect\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/valentin/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\valen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
         },
         "frameworks": {
           "net6.0": {
@@ -41,6 +46,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
             }
           },
           "imports": [
@@ -54,12 +63,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x86",
+              "version": "[6.0.12, 6.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
