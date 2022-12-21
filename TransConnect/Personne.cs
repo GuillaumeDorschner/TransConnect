@@ -30,11 +30,13 @@ namespace TransConnect
         public string Prenom
         {
             get { return prenom; }
+            set { prenom = value; }
         }
 
         public DateTime Naissance
         {
             get { return naissance; }
+            set { naissance = value; }
         }
 
         public string AdressePostale
