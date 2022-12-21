@@ -5,6 +5,7 @@ namespace TransConnect
 	{
         public int TriPrenomNom(Client a, Client b);
         public int TriVille(Client a, Client b);
+        public int TriAchatCumul(Client a, Client b);
     }
 }
 

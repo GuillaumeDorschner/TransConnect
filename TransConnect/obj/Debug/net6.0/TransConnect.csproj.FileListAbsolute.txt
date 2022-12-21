@@ -13,3 +13,16 @@
 /Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.pdb
 /Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.genruntimeconfig.cache
 /Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/ref/TransConnect.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.Configuration.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Json.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Physical.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.Primitives.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/System.Text.Encodings.Web.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/System.Text.Json.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll
+/Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.csproj.CopyComplete
