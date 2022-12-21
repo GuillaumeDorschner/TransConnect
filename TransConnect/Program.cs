@@ -15,6 +15,7 @@ namespace TransConnect
 
             Organigramme Org = new Organigramme(salarie);
             Org.Afficher();
+
         }
     }
 }

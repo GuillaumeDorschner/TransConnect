@@ -29,7 +29,7 @@ namespace TransConnect
 			return sum;
 		}
 
-		public int Tri1(Client a, Client b)
+		public int TriPrenomNom(Client a, Client b)
 		{
 			int x = a.Nom.CompareTo(b.Nom);
 			if(x==0)
@@ -39,12 +39,12 @@ namespace TransConnect
 			return x;
 		}
 
-        public int Tri2(Client a, Client b)
+        public int TriVille(Client a, Client b)
         {
 			return a.adressePostale.CompareTo(b.adressePostale);
         }
 
-        public static int Tri3(Client a, Client b)
+        public static int MontantAchatCumule(Client a, Client b)
         {
             return a.achatsCumule().CompareTo(b.achatsCumule());
         }
@@ -53,6 +53,9 @@ namespace TransConnect
 		{
 			return tri(a, b);
 		}
+
+		
+
     }
 }
 
