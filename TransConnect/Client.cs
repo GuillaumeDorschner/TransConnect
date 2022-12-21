@@ -18,6 +18,15 @@ namespace TransConnect
             get { return commande; }
         }
 
+		public int TriPrenomNom(Client a, Client b)
+		{
+			int x = a.Nom.CompareTo(b.Nom);
+			if(x==0)
+			{
+				x = x + a.Prenom.CompareTo(b.Prenom);
+			}
+			return x;
+		}
         public int achatsCumule()
         {
             int sum = 0;
@@ -28,30 +37,22 @@ namespace TransConnect
             return sum;
         }
 
-        public int Tri1(Client a, Client b)
-        {
-            int x = a.Nom.CompareTo(b.Nom);
-            if (x == 0)
-            {
-                x = x + a.Prenom.CompareTo(b.Prenom);
-            }
-            return x;
-        }
-
-        public int Tri2(Client a, Client b)
+        public int TriVille(Client a, Client b)
         {
             return a.adressePostale.CompareTo(b.adressePostale);
         }
 
-        public static int MontantAchatCumule(Client a, Client b)
+        public static int TriAchatCumul(Client a, Client b)
         {
             return a.achatsCumule().CompareTo(b.achatsCumule());
         }
 
-        public int typeDeTri1(Tri tri, Client a, Client b)
-        {
-            return tri(a, b);
-        }
+		public int TriFunction(Tri tri, Client a, Client b)
+		{
+			return tri(a, b);
+		}
+    }
+}
 
         List<Commande> Commande
         {
