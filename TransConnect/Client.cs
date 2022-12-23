@@ -178,12 +178,9 @@ namespace TransConnect
                         }
                     }
                 }
-                else
-                {
-                    Console.WriteLine("Aucuns clients trouvé avec cet");
-                    break;
-                }
-            }
+            } 
+Console.WriteLine("Aucuns clients trouvé avec ce nom");
+                   
         }
     }
 }
