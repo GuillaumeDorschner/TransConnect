@@ -16,22 +16,22 @@ namespace TransConnect
 			this.tempsTrajet = tempsTrajet;
 		}
 
-		string PointA
+		public string PointA
 		{
 			get { return pointA; }
 		}
 
-        string PointB
+        public string PointB
         {
             get { return pointB; }
         }
 
-        int Distance
+        public int Distance
         {
             get { return distance; }
         }
 
-        TimeSpan TempsTrajet
+        public TimeSpan TempsTrajet
 		{
 			get { return tempsTrajet; }
 		}

@@ -30,7 +30,11 @@ namespace TransConnect
 
             Organigramme Org = new Organigramme(salarie);
             //Org.Afficher();
-            Salarie nouveau = new Salarie(1093847, "Grateau", "Valentin", new DateTime(2002,09,13), "Fresnes", "valentin.grateau@gmail.com", "0782082123", new DateTime(2014,07,20), "chauffeur",2000);
+            Salarie nouveau = new Salarie(1093847, "Grateau", "Valentin", new DateTime(2002, 09, 13), "Fresnes", "valentin.grateau@gmail.com", "0782082123", new DateTime(2014, 07, 20), "chauffeur", 2000);
+            Commande commande = new Commande(test, new Livraison("Paris", "Marseille", 800, new TimeSpan(2,2, 5,0)),new Camion(nouveau,"ABC",1),nouveau,new DateTime(2022,10,10));
+            
+            Console.WriteLine("Ancienneté : " + nouveau.Anciennete() + " mois");
+            Console.WriteLine("Prix de la commande " + commande.tarifFinal() + " €");
             Org.Add("Romu","Pierpont",nouveau);
             Org.Delete("Romi", "Chandler");
 
