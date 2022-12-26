@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace TransConnect
@@ -10,6 +11,11 @@ namespace TransConnect
             // client json to client object
             List<Client> l1 = Client.FileToObj("../../../dataClient.json");
 
+            Client test = new Client("Abril", "Aarrane", new DateTime(2015, 12, 31) , "19, place de Miremont 47300 VILLENEUVE-SUR-LOT", "pierre.dupond@gmail.com", "016391645",
+            null);
+
+            Client.Add(l1,test);
+            Client.Delete(l1, "Margand");
             foreach (Client client in l1)
                 Console.WriteLine(client);
 
@@ -23,6 +29,7 @@ namespace TransConnect
 
             Organigramme Org = new Organigramme(salarie);
             Org.Afficher();
+
         }
     }
 }

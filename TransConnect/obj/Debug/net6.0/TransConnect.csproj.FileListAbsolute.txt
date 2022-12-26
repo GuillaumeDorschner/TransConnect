@@ -13,3 +13,44 @@
 /Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.pdb
 /Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.genruntimeconfig.cache
 /Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/ref/TransConnect.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.Configuration.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Json.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Physical.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.Primitives.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/System.Text.Encodings.Web.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/System.Text.Json.dll
+/Users/valentin/Projects/TransConnect/TransConnect/bin/Debug/net6.0/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll
+/Users/valentin/Projects/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.csproj.CopyComplete
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/Debug/net6.0/refint/TransConnect.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.pdb
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/TransConnect
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/TransConnect.deps.json
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/TransConnect.runtimeconfig.json
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/TransConnect.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/TransConnect.pdb
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.Configuration.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Json.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Physical.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Extensions.Primitives.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/Newtonsoft.Json.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/System.Text.Encodings.Web.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/System.Text.Json.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.csproj.AssemblyReference.cache
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.GeneratedMSBuildEditorConfig.editorconfig
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.AssemblyInfoInputs.cache
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.AssemblyInfo.cs
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.csproj.CoreCompileInputs.cache
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.csproj.CopyComplete
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.genruntimeconfig.cache
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/Debug/net6.0/ref/TransConnect.dll

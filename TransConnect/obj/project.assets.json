@@ -162,6 +162,19 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Newtonsoft.Json/13.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
@@ -444,6 +457,36 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Newtonsoft.Json/13.0.2": {
+      "sha512": "R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.2.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "type": "package",
@@ -574,23 +617,24 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Microsoft.Extensions.Configuration.Json >= 7.0.0"
+      "Microsoft.Extensions.Configuration.Json >= 7.0.0",
+      "Newtonsoft.Json >= 13.0.2"
     ]
   },
   "packageFolders": {
-    "/Users/valentin/.nuget/packages/": {}
+    "/Users/guillaumedorschner/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/valentin/Projects/TransConnect/TransConnect/TransConnect.csproj",
+      "projectUniqueName": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/TransConnect.csproj",
       "projectName": "TransConnect",
-      "projectPath": "/Users/valentin/Projects/TransConnect/TransConnect/TransConnect.csproj",
-      "packagesPath": "/Users/valentin/.nuget/packages/",
-      "outputPath": "/Users/valentin/Projects/TransConnect/TransConnect/obj/",
+      "projectPath": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/TransConnect.csproj",
+      "packagesPath": "/Users/guillaumedorschner/.nuget/packages/",
+      "outputPath": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/valentin/.nuget/NuGet/NuGet.Config"
+        "/Users/guillaumedorschner/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -617,6 +661,10 @@
           "Microsoft.Extensions.Configuration.Json": {
             "target": "Package",
             "version": "[7.0.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.2, )"
           }
         },
         "imports": [
@@ -635,7 +683,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }
