@@ -157,10 +157,10 @@ namespace TransConnect
             licencie.Frere = licencie.Frere.Frere;
         }
 
-        public void chauffeurLivraisonsTot()
+        /*public void chauffeurLivraisonsTot()
         {
             
-        }
+        }*/
 
     }
 }
