@@ -83,9 +83,31 @@ namespace TransConnect
         }
         private void Add(Salarie manager, Salarie embauche, Salarie temp)
         {
-                if (manager.Enfant == null)
+            /*Console.WriteLine("Vous allez rentrer les informations du salarié à ajouter : \n");
+            Console.WriteLine("Veuillez rentrer son numéro de sécurité sociale : \n");
+            int numeroSS = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Veuillez rentrer son nom : \n");
+            string nom = Console.ReadLine();
+            Console.WriteLine("Veuillez rentrer son prénom : \n");
+            string prenom = Console.ReadLine();
+            Console.WriteLine("Veuillez rentrer sa date de naissance avec le modèle suivant Année/Mois/Jour : \n");
+            DateTime naissance = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine("Veuillez rentrer son adresse postale : \n");
+            string adressePostale = Console.ReadLine();
+            Console.WriteLine("Veuillez rentrer son adresse mail : \n");
+            string adresseMail = Console.ReadLine();
+            Console.WriteLine("Veuillez rentrer son numéro de portable : \n");
+            string portable = Console.ReadLine();
+            Console.WriteLine("Veuillez rentrer sa date d'arrivée avec le modèle suivant Année/Mois/Jour : \n");
+            DateTime arrivee = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine("Veuillez rentrer son poste : \n");
+            string poste = Console.ReadLine();
+            Console.WriteLine("Veuillez rentrer son salaire : \n");
+            int salaire = Int32.Parse(Console.ReadLine());
+            Salarie temp2 = new Salarie(numeroSS, nom, prenom, naissance, adressePostale, adresseMail, portable, arrivee, poste, salaire);*/
+            if (manager.Enfant == null)
                 {
-                    manager.Enfant = embauche;
+                manager.Enfant = embauche;
                 }
                 else
                 {
@@ -134,6 +156,11 @@ namespace TransConnect
         {      
             licencie.Frere = licencie.Frere.Frere;
         }
+
+        /*public void chauffeurLivraisonsTot()
+        {
+            
+        }*/
 
     }
 }

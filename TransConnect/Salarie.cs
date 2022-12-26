@@ -69,6 +69,10 @@ namespace TransConnect
             set { enfant = value; }
         }
 
+        public int Anciennete()
+        {
+            return DateTime.Now.Month - Arrivee.Month;
+        }
         
     }
 }

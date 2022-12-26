@@ -11,15 +11,17 @@ namespace TransConnect
         protected Salarie chauffeur;
         protected DateTime dateLivraison;
 
+        public delegate float calculPrix();
+        public delegate float tarif(Commande a);
 
-        public Commande(Client client, Livraison livraison, int prix, Vehicule vehicule, Salarie chauffeur, DateTime dateLivraison)
+        public Commande(Client client, Livraison livraison, Vehicule vehicule, Salarie chauffeur, DateTime dateLivraison)
         {
             this.client = client;
             this.livraison = livraison;
-            this.prix = prix;
             this.vehicule = vehicule;
             this.chauffeur = chauffeur;
             this.dateLivraison = dateLivraison;
+            this.prix = (int)(calculPrixAnciennete(this));
         }
 
         public Client Client
@@ -51,6 +53,20 @@ namespace TransConnect
         {
             get { return dateLivraison; }
         }
+
+        public static float calculPrixAnciennete(Commande a)
+        {
+            float res = 0;
+            res = a.Livraison.Distance / 3;
+            res =  res + (a.Chauffeur.Anciennete() / 1) * 50;
+            return res;
+        }
+
+        public float tarifFinal()
+        {
+            return calculPrixAnciennete(this);
+        }
+
     }
 }
 
