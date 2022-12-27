@@ -20,6 +20,10 @@ namespace TransConnect
             this.vehicule = vehicule;
             this.chauffeur = chauffeur;
             this.dateLivraison = dateLivraison;
+
+            // Ajoute de la foreign key (comme pour sql)
+            client.Commandes.Add(this);
+            livraison.Commandes.Add(this);
         }
 
         public Client Client

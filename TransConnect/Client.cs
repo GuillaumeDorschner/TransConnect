@@ -18,6 +18,7 @@ namespace TransConnect
 
         List<Commande> Commande
         {
+            set { commande = value; }
             get { return commande; }
         }
 
