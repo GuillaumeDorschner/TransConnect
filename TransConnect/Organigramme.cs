@@ -49,9 +49,8 @@ namespace TransConnect
 
             if (node.Enfant != null) Afficher(node.Enfant, level + 1);
             if (node.Frere != null) Afficher(node.Frere, level);
-        }   
+        }
 
 
     }
 }
-

@@ -2,7 +2,7 @@
 
 namespace TransConnect
 {
-    public class Commande 
+    public class Commande
     {
         protected Client client;
         protected Livraison livraison;
@@ -53,4 +53,3 @@ namespace TransConnect
         }
     }
 }
-
