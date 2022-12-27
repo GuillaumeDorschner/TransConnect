@@ -1,7 +1,7 @@
 ﻿using System;
 namespace TransConnect
 {
-    public class Client : Personne, ITris
+    public class Client : Personne
     {
         //Collection de clients en mémoire = static List<Client> dans le main surement
         protected List<Commande> commande;
@@ -10,47 +10,6 @@ namespace TransConnect
             List<Commande> commande) : base(nom, prenom, naissance, adressePostale, adresseMail, portable)
         {
             this.commande = commande;
-        }
-
-
-        List<Commande> Commande
-        {
-            get { return commande; }
-        }
-
-        public int achatsCumule()
-        {
-            int sum = 0;
-            foreach (Commande i in commande)
-            {
-                sum += i.Prix;
-            }
-            return sum;
-        }
-
-        public int Tri1(Client a, Client b)
-        {
-            int x = a.Nom.CompareTo(b.Nom);
-            if (x == 0)
-            {
-                x = x + a.Prenom.CompareTo(b.Prenom);
-            }
-            return x;
-        }
-
-        public int Tri2(Client a, Client b)
-        {
-            return a.adressePostale.CompareTo(b.adressePostale);
-        }
-
-        public int TriVille(Client a, Client b)
-        {
-            return a.adressePostale.CompareTo(b.adressePostale);
-        }
-
-        public int typeDeTri1(Tri tri, Client a, Client b)
-        {
-            return tri(a, b);
         }
 
         List<Commande> Commande
@@ -79,3 +38,4 @@ namespace TransConnect
         }
     }
 }
+
