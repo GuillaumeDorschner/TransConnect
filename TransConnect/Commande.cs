@@ -58,7 +58,7 @@ namespace TransConnect
         {
             float res = 0;
             res = a.Livraison.Distance / 3;
-            res =  res + (a.Chauffeur.Anciennete() / 1) * 50;
+            res =  res + (a.Chauffeur.Anciennete().Days ) * 50;
             return res;
         }
 

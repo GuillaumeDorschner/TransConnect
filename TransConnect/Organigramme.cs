@@ -83,68 +83,46 @@ namespace TransConnect
         }
         private void Add(Salarie manager, Salarie embauche, Salarie temp)
         {
-            /*Console.WriteLine("Vous allez rentrer les informations du salarié à ajouter : \n");
-            Console.WriteLine("Veuillez rentrer son numéro de sécurité sociale : \n");
-            int numeroSS = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Veuillez rentrer son nom : \n");
-            string nom = Console.ReadLine();
-            Console.WriteLine("Veuillez rentrer son prénom : \n");
-            string prenom = Console.ReadLine();
-            Console.WriteLine("Veuillez rentrer sa date de naissance avec le modèle suivant Année/Mois/Jour : \n");
-            DateTime naissance = DateTime.Parse(Console.ReadLine());
-            Console.WriteLine("Veuillez rentrer son adresse postale : \n");
-            string adressePostale = Console.ReadLine();
-            Console.WriteLine("Veuillez rentrer son adresse mail : \n");
-            string adresseMail = Console.ReadLine();
-            Console.WriteLine("Veuillez rentrer son numéro de portable : \n");
-            string portable = Console.ReadLine();
-            Console.WriteLine("Veuillez rentrer sa date d'arrivée avec le modèle suivant Année/Mois/Jour : \n");
-            DateTime arrivee = DateTime.Parse(Console.ReadLine());
-            Console.WriteLine("Veuillez rentrer son poste : \n");
-            string poste = Console.ReadLine();
-            Console.WriteLine("Veuillez rentrer son salaire : \n");
-            int salaire = Int32.Parse(Console.ReadLine());
-            Salarie temp2 = new Salarie(numeroSS, nom, prenom, naissance, adressePostale, adresseMail, portable, arrivee, poste, salaire);*/
             if (manager.Enfant == null)
                 {
                 manager.Enfant = embauche;
                 }
-                else
+            else
                 {
-                    Salarie temp2 = manager.Enfant;
-                    while (temp2 != null)
+                Salarie temp2 = manager.Enfant;
+                    while (temp2.Frere != null)
                     {
                         temp2 = temp2.Frere;
                     }
-                    temp2 = embauche;
+                    temp2.Frere = embauche;
                 }
         }
 
-        public Salarie FindFrere(string nom, string prenom)
+        public Salarie FindEnfant(string nom, string prenom)
         {
-            return FindFrere(nom, prenom, this.pdg);
+            return FindEnfant(nom, prenom, this.pdg);
         }
-        private Salarie FindFrere(string nom, string prenom, Salarie temp)
+        private Salarie FindEnfant(string nom, string prenom, Salarie temp)
         {
             if (temp != null)
             {
                 
-                    if (temp.Frere != null && temp.Frere.Nom == nom && temp.Frere.Prenom == prenom)
+                    if (temp.Enfant != null && temp.Enfant.Nom == nom && temp.Enfant.Prenom == prenom)
                     {
                         return temp;
                     }
                     else
                     {
-                        Salarie tmp = FindFrere(nom, prenom, temp.Frere);
+                        Salarie tmp = FindEnfant(nom, prenom, temp.Frere);
                         if (tmp != null) return tmp;
-                        return FindFrere(nom, prenom, temp.Enfant);
+                        return FindEnfant(nom, prenom, temp.Enfant);
                     }
             }
             else return null;
         }
         public void Delete(string licencieNom, string licenciePrenom)
         {
-            Salarie licencie = this.FindFrere(licencieNom, licenciePrenom);
+            Salarie licencie = this.FindEnfant(licencieNom, licenciePrenom);
             if (licencie == null)
             {
                 Console.WriteLine("Licensié introuvable");
@@ -153,8 +131,17 @@ namespace TransConnect
             Delete(licencie);
         }
         private void Delete(Salarie licencie)
-        {      
-            licencie.Frere = licencie.Frere.Frere;
+        {
+            if(licencie.Enfant.Enfant == null)
+            {
+                licencie.Enfant = licencie.Enfant.Enfant;
+            }
+            else
+            {
+                licencie.Enfant.Enfant.Frere = licencie.Enfant.Frere;
+                licencie.Enfant = licencie.Enfant.Enfant;
+            }
+            
         }
 
         /*public void chauffeurLivraisonsTot()

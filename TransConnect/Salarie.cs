@@ -69,11 +69,13 @@ namespace TransConnect
             set { enfant = value; }
         }
 
-        public int Anciennete()
+        public TimeSpan Anciennete()
         {
-            return DateTime.Now.Month - Arrivee.Month;
+            TimeSpan res = DateTime.Now.Subtract(Arrivee);
+            return res;
         }
-        
+
+
     }
 }
 
