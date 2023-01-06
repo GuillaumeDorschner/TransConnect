@@ -18,19 +18,18 @@ namespace TransConnect
 
         List<Commande> Commande
         {
-            set { commande = value; }
             get { return commande; }
         }
 
-        public int TriPrenomNom(Client a, Client b)
-        {
-            int x = a.Nom.CompareTo(b.Nom);
-            if (x == 0)
-            {
-                x = x + a.Prenom.CompareTo(b.Prenom);
-            }
-            return x;
-        }
+		public int TriPrenomNom(Client a, Client b)
+		{
+			int x = a.Nom.CompareTo(b.Nom);
+			if(x==0)
+			{
+				x = x + a.Prenom.CompareTo(b.Prenom);
+			}
+			return x;
+		}
         public int achatsCumule()
         {
             int sum = 0;
@@ -46,9 +45,9 @@ namespace TransConnect
             return a.adressePostale.CompareTo(b.adressePostale);
         }
 
-        public int TriAchatCumul(Client a, Client b) //A tester pas de delegte car je ne sais pas comment faire
-        {
-            return a.achatsCumule().CompareTo(b.achatsCumule());
+		public int TriAchatCumul(Client a, Client b) //A tester pas de delegte car je ne sais pas comment faire
+		{
+			return a.achatsCumule().CompareTo(b.achatsCumule());
         }
 
         public static List<Client> FileToObj(string path)
@@ -71,16 +70,16 @@ namespace TransConnect
             return base.ToString() + " " + commande;
         }
 
-        public static void Add(List<Client> listClient, Client add)
+        public static void Add(List<Client> listClient,Client add)
         {
             listClient.Add(add);
         }
 
-        public static void Delete(List<Client> listClient, string NameDelete)
+        public static void Delete(List<Client> listClient,string NameDelete)
         {
-            foreach (Client i in listClient)
+            foreach(Client i in listClient)
             {
-                if (i.Nom == NameDelete)
+                if(i.Nom == NameDelete)
                 {
                     listClient.Remove(i);
                     break;
@@ -100,7 +99,7 @@ namespace TransConnect
                 if (i.Nom == modify)
                 {
                     Console.WriteLine("Que voulez-vous modifier ?");
-
+                    
                 }
                 else
                 {

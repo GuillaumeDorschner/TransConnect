@@ -2,7 +2,7 @@
 
 namespace TransConnect
 {
-    public class Commande
+    public class Commande 
     {
         protected Client client;
         protected Livraison livraison;
@@ -20,10 +20,6 @@ namespace TransConnect
             this.vehicule = vehicule;
             this.chauffeur = chauffeur;
             this.dateLivraison = dateLivraison;
-
-            // Ajoute de la foreign key (comme pour sql)
-            client.Commandes.Add(this);
-            livraison.Commandes.Add(this);
         }
 
         public Client Client
@@ -57,3 +53,4 @@ namespace TransConnect
         }
     }
 }
+

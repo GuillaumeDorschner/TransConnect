@@ -11,12 +11,19 @@ namespace TransConnect
             this.nom = "TransConnect";
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pdg"></param>
         public Organigramme(Salarie pdg)
         {
             this.pdg = pdg;
             this.nom = "TransConnect";
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Afficher()
         {
 
@@ -49,8 +56,9 @@ namespace TransConnect
 
             if (node.Enfant != null) Afficher(node.Enfant, level + 1);
             if (node.Frere != null) Afficher(node.Frere, level);
-        }
+        }   
 
 
     }
 }
+
