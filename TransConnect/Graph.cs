@@ -11,6 +11,10 @@ namespace TransConnect
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="path"></param>
         public Graph(string path)
         {
             string[] lines = File.ReadAllLines(path);
@@ -39,11 +43,22 @@ namespace TransConnect
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="edges"></param>
         public void AddVertex(string name, Dictionary<string, int> edges)
         {
             vertices[name] = edges;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="finish"></param>
+        /// <returns></returns>
         public List<string> ShortestPath(string start, string finish)
         {
             var previous = new Dictionary<string, string>();

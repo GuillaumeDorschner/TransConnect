@@ -11,12 +11,19 @@ namespace TransConnect
             this.nom = "TransConnect";
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pdg"></param>
         public Organigramme(Salarie pdg)
         {
             this.pdg = pdg;
             this.nom = "TransConnect";
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Afficher()
         {
 
