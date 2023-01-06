@@ -20,8 +20,6 @@ public class UnitTest1
 
         List<string> path = graph.ShortestPath("A", "H");
 
-        Console.WriteLine("Shortest path : " + string.Join(" -> ", path) + "\n");
-
         Assert.AreEqual("A -> B -> F -> H", string.Join(" -> ", path));
     }
 }
