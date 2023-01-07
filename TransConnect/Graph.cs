@@ -12,53 +12,63 @@ namespace TransConnect
         }
 
         /// <summary>
-        /// 
+        /// Constructeur de la classe Graph à partir d'un fichier
         /// </summary>
-        /// <param name="path"></param>
+        /// <param name="path">Chemin du ficher .csv</param>
         public Graph(string path)
         {
-            string[] lines = File.ReadAllLines(path);
-
-
-            foreach (string line in lines)
+            try
             {
-                string[] values = line.Split(';');
-                string city1 = values[0];
-                string city2 = values[1];
-                int distance = int.Parse(values[2]);
+                string[] lines = File.ReadAllLines(path);
 
-                if (!vertices.ContainsKey(city1))
+
+                foreach (string line in lines)
                 {
-                    vertices[city1] = new Dictionary<string, int>();
-                }
+                    string[] values = line.Split(';');
+                    string city1 = values[0];
+                    string city2 = values[1];
+                    int distance = int.Parse(values[2]);
 
-                if (!vertices.ContainsKey(city2))
-                {
-                    vertices[city2] = new Dictionary<string, int>();
-                }
+                    if (!vertices.ContainsKey(city1))
+                    {
+                        vertices[city1] = new Dictionary<string, int>();
+                    }
 
-                vertices[city1][city2] = distance;
-                vertices[city2][city1] = distance;
+                    if (!vertices.ContainsKey(city2))
+                    {
+                        vertices[city2] = new Dictionary<string, int>();
+                    }
+
+                    vertices[city1][city2] = distance;
+                    vertices[city2][city1] = distance;
+                }
             }
-
+            catch (FileNotFoundException f)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("Erreur : ");
+                Console.WriteLine(f.Message);
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.ResetColor();
+            }
         }
 
         /// <summary>
-        /// 
+        /// Ajoute un sommet au graphe
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="edges"></param>
+        /// <param name="name">Nom du sommet</param>
+        /// <param name="edges">Liste des sommets adjacents</param>
         public void AddVertex(string name, Dictionary<string, int> edges)
         {
             vertices[name] = edges;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="start"></param>
-        /// <param name="finish"></param>
-        /// <returns></returns>
+        ///<summary>
+        /// Retourne le chemin le plus court entre deux points dans un graphe.
+        ///</summary>
+        ///<param name="start">Le nom du point de départ</param>
+        ///<param name="finish">Le nom du point d'arrivée</param>
+        ///<returns>Une liste de chaînes de caractères représentant le chemin le plus court entre les deux points</returns>
         public List<string> ShortestPath(string start, string finish)
         {
             var previous = new Dictionary<string, string>();
