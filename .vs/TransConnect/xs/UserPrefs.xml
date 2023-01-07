@@ -1,39 +1,23 @@
 ﻿<Properties StartupConfiguration="{EBBC399E-BB3F-4670-94EE-9905E6F610AF}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.TransConnect PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="TransConnect/Organigramme.cs">
-    <Files>
-      <File FileName="TransConnect/Program.cs" Line="31" Column="30" />
-      <File FileName="TransConnect/Graph.cs" Line="15" Column="13" />
-      <File FileName="TransConnect/Organigramme.cs" Line="25" Column="13" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TransConnect" expanded="True">
             <Node name="TransConnect" expanded="True">
-              <Node name="Organigramme.cs" selected="True" />
+              <Node name="Graph.cs" selected="True" />
             </Node>
             <Node name="TransConnect.UnitTests" expanded="True" />
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="TransConnect" expanded="True">
-            <Node name="TransConnect.UnitTests" expanded="True">
-              <Node name="TransConnect.UnitTests" expanded="True">
-                <Node name="UnitTest1" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.TransConnect PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
