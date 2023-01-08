@@ -36,7 +36,7 @@ namespace TransConnect
 
             var path = graph.ShortestPath("Lyon", "Rouen");
 
-            Console.WriteLine("Shortest path : " + string.Join(" -> ", path));
+            //Console.WriteLine("Shortest path : " + string.Join(" -> ", path));
         }
     }
 }
