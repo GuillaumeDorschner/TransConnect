@@ -73,7 +73,7 @@ namespace TransConnect
         ///</summary>
         ///<param name="start">Le nom du point de départ</param>
         ///<param name="finish">Le nom du point d'arrivée</param>
-        ///<returns>Une liste de chaînes de caractères représentant le chemin le plus court entre les deux points</returns>
+        ///<returns>Un tuple (path / distance / temp) du chemin le plus court entre les deux points</returns>
         public (List<string>, int, TimeSpan) ShortestPath(string start, string finish)
         {
             var previous = new Dictionary<string, string>();
@@ -85,6 +85,8 @@ namespace TransConnect
             int distance = 0;
             TimeSpan time = new TimeSpan();
 
+
+            // init the dict like dijkstra algo infini
             foreach (var vertex in vertices)
             {
                 if (vertex.Key == start)
@@ -101,6 +103,7 @@ namespace TransConnect
                 nodes.Add(vertex.Key);
             }
 
+            // check if all the node where done
             while (nodes.Count != 0)
             {
                 nodes.Sort((x, y) => distances[x] - distances[y]);
@@ -110,6 +113,7 @@ namespace TransConnect
 
                 if (smallest == finish)
                 {
+                    // recreate the taken path
                     path = new List<string>();
                     while (previous.ContainsKey(smallest))
                     {
@@ -131,8 +135,8 @@ namespace TransConnect
                     var altTime = times[smallest] + neighbor.Value.Item2;
                     if (alt < distances[neighbor.Key])
                     {
-                        distances[neighbor.Key] = alt;
                         previous[neighbor.Key] = smallest;
+                        distances[neighbor.Key] = alt;
                         times[neighbor.Key] = altTime;
                     }
                 }
