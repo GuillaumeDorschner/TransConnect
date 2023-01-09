@@ -28,7 +28,6 @@ namespace TransConnect
                     string city1 = values[0];
                     string city2 = values[1];
                     int distance = int.Parse(values[2]);
-                    Console.Write(values[3].Replace('h', ':'));
                     TimeSpan time = TimeSpan.Parse(values[3].Replace('h', ':'));
 
                     if (!vertices.ContainsKey(city1))
