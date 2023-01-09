@@ -1,12 +1,28 @@
 ﻿<Properties StartupConfiguration="{EBBC399E-BB3F-4670-94EE-9905E6F610AF}|Default">
   <MultiItemStartupConfigurations />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench>
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TransConnect PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TransConnect/Program.cs">
+    <Files>
+      <File FileName="TransConnect/Program.cs" Line="39" Column="82" />
+      <File FileName="TransConnect/Graph.cs" Line="30" Column="57" />
+    </Files>
+>>>>>>> guillaume
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TransConnect" expanded="True">
             <Node name="TransConnect" expanded="True">
+<<<<<<< HEAD
               <Node name="Graph.cs" selected="True" />
+=======
+              <Node name="data" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+>>>>>>> guillaume
             </Node>
             <Node name="TransConnect.UnitTests" expanded="True" />
           </Node>
@@ -17,7 +33,10 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.TransConnect PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+=======
+>>>>>>> guillaume
 </Properties>
