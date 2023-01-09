@@ -3,14 +3,16 @@ namespace TransConnect
 {
 	public class Voiture : Vehicule
 	{
-		protected int nombrePassagers;
 
-		public Voiture(Salarie chauffeur, int nombrePassagers,string immatriculation) : base(chauffeur,immatriculation)
+		public Voiture(string immatriculation) : base(immatriculation)
 		{
-			this.chauffeur = chauffeur;
-			this.nombrePassagers = nombrePassagers;
 			this.immatriculation = immatriculation;
 		}
-	}
+
+        public override string ToString()
+        {
+            return "Voiture : " + this.immatriculation ;
+        }
+    }
 }
 

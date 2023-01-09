@@ -11,15 +11,20 @@ namespace TransConnect
         protected Salarie chauffeur;
         protected DateTime dateLivraison;
 
+        public delegate float calculPrix();
+        public delegate float tarif(Commande a);
 
-        public Commande(Client client, Livraison livraison, int prix, Vehicule vehicule, Salarie chauffeur, DateTime dateLivraison)
+        public Commande(Client client, Livraison livraison, Vehicule vehicule, Salarie chauffeur, DateTime dateLivraison)
         {
             this.client = client;
             this.livraison = livraison;
-            this.prix = prix;
             this.vehicule = vehicule;
             this.chauffeur = chauffeur;
             this.dateLivraison = dateLivraison;
+            this.prix = (int)calculPrixCommande(this);
+            this.client.Commande.Enqueue(this);
+            this.chauffeur.Commande.Enqueue(this);
+
         }
 
         public Client Client
@@ -51,6 +56,32 @@ namespace TransConnect
         {
             get { return dateLivraison; }
         }
+
+        public static double calculPrixCommande(Commande a)
+        {
+            double res = 0;
+            res = a.Livraison.Distance / 3;
+            res =  res + a.Chauffeur.Anciennete();
+
+            double type = 0;
+            if (a.Vehicule.GetType() == typeof(Voiture)) type = 1;
+            else if(a.Vehicule.GetType() == typeof(Camionnette)) type = 1.5;
+            else type = 2;
+
+            res = res * type;
+            return res;
+        }
+
+        public double tarifFinal()
+        {
+            return calculPrixCommande(this);
+        }
+
+        public override string ToString()
+        {
+            return "Client : " + this.client.Nom + " " + this.client.Prenom + "\nLivraison : " + this.livraison.PointA + " - " + this.livraison.PointB + "\nPrix : " + this.prix + "€ \nVehicule : " + this.vehicule.ToString() + " \nChauffeur : " + this.chauffeur.Nom + " " + this.chauffeur.Prenom + " \nDate de livraison : " + this.dateLivraison;
+        }
+
     }
 }
 

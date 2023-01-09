@@ -6,35 +6,40 @@ namespace TransConnect
 		protected string pointA;
 		protected string pointB;
 		protected int distance;
+		protected string chemin;
 		protected TimeSpan tempsTrajet;
 
-		public Livraison(string pointA, string pointB, int distance, TimeSpan tempsTrajet)
+		public Livraison(Graph graph,string pointA, string pointB)
 		{
-			this.pointA = pointA;
+            var path = graph.ShortestPath(this.PointA, this.PointB);
+			this.distance = path.Item2;
+			this.tempsTrajet = path.Item3;
+			this.chemin = string.Join(" -> ", path.Item1);
+            this.pointA = pointA;
 			this.pointB = pointB;
-			this.distance = distance;
-			this.tempsTrajet = tempsTrajet;
 		}
 
-		string PointA
+		public string PointA
 		{
 			get { return pointA; }
 		}
 
-        string PointB
+        public string PointB
         {
             get { return pointB; }
         }
 
-        int Distance
+        public int Distance
         {
             get { return distance; }
         }
 
-        TimeSpan TempsTrajet
+		public TimeSpan TempsTrajet
 		{
 			get { return tempsTrajet; }
 		}
+
+
     }
 }
 
