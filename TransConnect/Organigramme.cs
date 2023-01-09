@@ -191,6 +191,8 @@ namespace TransConnect
         }
         private Salarie chauffeurLibre(DateTime date, Salarie temp)
         {
+            if (temp == null) return null;
+
             if (temp.Poste == "Chauffeur")
             {
                 bool libre = true;
@@ -205,11 +207,14 @@ namespace TransConnect
                 if (libre) return temp;
             }
 
-            if (temp.Enfant != null) chauffeurLibre(date, temp.Enfant);
-            if (temp.Frere != null) chauffeurLibre(date, temp.Frere);
+            var tmp = chauffeurLibre(date, temp.Frere);
+            if (tmp != null)
+                return tmp;
+            return chauffeurLibre(date, temp.Enfant);
 
-            //Il n'y a pas de chauffeur libre
-            return null;
+
+            //if (temp.Frere != null) return chauffeurLibre(date, temp.Frere);
+            //if (temp.Enfant != null) return chauffeurLibre(date, temp.Enfant);
         }
         // private Salarie chauffeurLibre(DateTime date, Salarie temp)
         // {
