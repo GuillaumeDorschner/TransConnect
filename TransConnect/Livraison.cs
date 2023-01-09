@@ -9,7 +9,7 @@ namespace TransConnect
 		protected string chemin;
 		protected TimeSpan tempsTrajet;
 
-		public Livraison(string pointA, string pointB)
+		public Livraison(Graph graph,string pointA, string pointB)
 		{
             var path = graph.ShortestPath(this.PointA, this.PointB);
 			this.distance = path.Item2;

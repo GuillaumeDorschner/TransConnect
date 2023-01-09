@@ -54,15 +54,15 @@ namespace TransConnect
         {
             return Find(nom, prenom, this.pdg);
         }
-        private Salarie Find(string nom,string prenom,Salarie temp)
+        private Salarie Find(string nom, string prenom, Salarie temp)
         {
             if (temp != null)
             {
-                if(temp.Nom == nom && temp.Prenom == prenom)
+                if (temp.Nom == nom && temp.Prenom == prenom)
                 {
                     return temp;
                 }
-                else 
+                else
                 {
                     Salarie tmp = Find(nom, prenom, temp.Frere);
                     if (tmp != null) return tmp;
@@ -79,23 +79,23 @@ namespace TransConnect
                 Console.WriteLine("Manager introuvable");
                 return;
             }
-            Add(manager,embauche,pdg);
+            Add(manager, embauche, pdg);
         }
         private void Add(Salarie manager, Salarie embauche, Salarie temp)
         {
             if (manager.Enfant == null)
-                {
+            {
                 manager.Enfant = embauche;
-                }
+            }
             else
-                {
+            {
                 Salarie temp2 = manager.Enfant;
-                    while (temp2.Frere != null)
-                    {
-                        temp2 = temp2.Frere;
-                    }
-                    temp2.Frere = embauche;
+                while (temp2.Frere != null)
+                {
+                    temp2 = temp2.Frere;
                 }
+                temp2.Frere = embauche;
+            }
         }
 
         public Salarie FindEnfant(string nom, string prenom)
@@ -106,17 +106,17 @@ namespace TransConnect
         {
             if (temp != null)
             {
-                
-                    if (temp.Enfant != null && temp.Enfant.Nom == nom && temp.Enfant.Prenom == prenom)
-                    {
-                        return temp;
-                    }
-                    else
-                    {
-                        Salarie tmp = FindEnfant(nom, prenom, temp.Frere);
-                        if (tmp != null) return tmp;
-                        return FindEnfant(nom, prenom, temp.Enfant);
-                    }
+
+                if (temp.Enfant != null && temp.Enfant.Nom == nom && temp.Enfant.Prenom == prenom)
+                {
+                    return temp;
+                }
+                else
+                {
+                    Salarie tmp = FindEnfant(nom, prenom, temp.Frere);
+                    if (tmp != null) return tmp;
+                    return FindEnfant(nom, prenom, temp.Enfant);
+                }
             }
             else return null;
         }
@@ -146,7 +146,7 @@ namespace TransConnect
         public void Delete(string licencieNom, string licenciePrenom)
         {
             Salarie licencie = this.FindEnfant(licencieNom, licenciePrenom);
-            
+
             if (licencie == null)
             {
                 licencie = this.FindFrere(licencieNom, licenciePrenom);
@@ -160,9 +160,9 @@ namespace TransConnect
             else Delete(licencie, false);
 
         }
-        private void Delete(Salarie licencie,bool frere)
+        private void Delete(Salarie licencie, bool frere)
         {
-            if(!frere)
+            if (!frere)
             {
                 licencie.Enfant = licencie.Enfant.Enfant;
             }
@@ -170,42 +170,64 @@ namespace TransConnect
             {
                 licencie.Frere = licencie.Frere.Frere;
             }
-            
+
         }
 
         public Salarie chauffeurLibre(DateTime date)
         {
-            return chauffeurLibre(date,this.pdg);
+            return chauffeurLibre(date, this.pdg);
         }
         private Salarie chauffeurLibre(DateTime date, Salarie temp)
         {
-            if (temp != null)
+            if (temp.Poste == "Chauffeur")
             {
-                if (temp.Poste == "Chauffeur")
+                bool libre = true;
+                foreach (Commande i in temp.Commande)
                 {
-                    foreach(Commande i in temp.Commande)
+                    if (i.DateLivraison == date)
                     {
-                        if(i.DateLivraison == date)
-                        {
-                            return null;
-                        }
-                        else
-                        {
-                            return temp;
-                        }
-                        
+                        libre = false;
                     }
-                    return null;
                 }
-                else
-                {
-                    Salarie tmp = chauffeurLibre(date,temp.Frere);
-                    if (tmp != null) return tmp;
-                    return chauffeurLibre(date,temp.Enfant);
-                }
+
+                if (libre) return temp;
             }
-            else return null;
+
+            if (temp.Enfant != null) chauffeurLibre(date, temp.Enfant);
+            if (temp.Frere != null) chauffeurLibre(date, temp.Frere);
+
+            //Il n'y a pas de chauffeur libre
+            return null;
         }
+        // private Salarie chauffeurLibre(DateTime date, Salarie temp)
+        // {
+        //     if (temp != null)
+        //     {
+        //         if (temp.Poste == "Chauffeur")
+        //         {
+        //             foreach(Commande i in temp.Commande)
+        //             {
+        //                 if(i.DateLivraison == date)
+        //                 {
+        //                     return null;
+        //                 }
+        //                 else
+        //                 {
+        //                     return temp;
+        //                 }
+
+        //             }
+        //             return null;
+        //         }
+        //         else
+        //         {
+        //             Salarie tmp = chauffeurLibre(date,temp.Frere);
+        //             if (tmp != null) return tmp;
+        //             return chauffeurLibre(date,temp.Enfant);
+        //         }
+        //     }
+        //     else return null;
+        // }
 
     }
 }
