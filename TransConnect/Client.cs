@@ -4,21 +4,22 @@ namespace TransConnect
     public class Client : Personne, ITris
     {
         //Collection de clients en mémoire = static List<Client> dans le main surement
-        protected List<Commande> commande;
+        protected Queue<Commande> commande;
 
         public delegate int typeDeTri();
         public delegate int Tri(Client a, Client b);
 
         public Client(string nom, string prenom, DateTime naissance, string adressePostale, string adresseMail, string portable,
-            List<Commande> commande) : base(nom, prenom, naissance, adressePostale, adresseMail, portable)
+            Queue<Commande> commande) : base(nom, prenom, naissance, adressePostale, adresseMail, portable)
         {
-            this.commande = commande;
+            this.commande = new Queue<Commande>();
         }
 
 
-        List<Commande> Commande
+        public Queue<Commande> Commande
         {
             get { return commande; }
+            set { commande = value; }
         }
 
 		public int TriPrenomNom(Client a, Client b)
