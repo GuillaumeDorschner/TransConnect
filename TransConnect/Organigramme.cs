@@ -211,41 +211,7 @@ namespace TransConnect
             if (tmp != null)
                 return tmp;
             return chauffeurLibre(date, temp.Enfant);
-
-
-            //if (temp.Frere != null) return chauffeurLibre(date, temp.Frere);
-            //if (temp.Enfant != null) return chauffeurLibre(date, temp.Enfant);
         }
-        // private Salarie chauffeurLibre(DateTime date, Salarie temp)
-        // {
-        //     if (temp != null)
-        //     {
-        //         if (temp.Poste == "Chauffeur")
-        //         {
-        //             foreach(Commande i in temp.Commande)
-        //             {
-        //                 if(i.DateLivraison == date)
-        //                 {
-        //                     return null;
-        //                 }
-        //                 else
-        //                 {
-        //                     return temp;
-        //                 }
-
-        //             }
-        //             return null;
-        //         }
-        //         else
-        //         {
-        //             Salarie tmp = chauffeurLibre(date,temp.Frere);
-        //             if (tmp != null) return tmp;
-        //             return chauffeurLibre(date,temp.Enfant);
-        //         }
-        //     }
-        //     else return null;
-        // }
-
     }
 }
 

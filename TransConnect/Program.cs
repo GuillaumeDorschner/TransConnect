@@ -10,26 +10,17 @@ namespace TransConnect
     {
         static void Main(string[] args)
         {
-
+            // tout les imports
             string json = File.ReadAllText("../../../data/data.json");
             Salarie salarie = Newtonsoft.Json.JsonConvert.DeserializeObject<Salarie>(json);
             Organigramme Org = new Organigramme(salarie);
             List<Client> clientsList = Client.FileToObj("../../../data/dataClient.json");
             Graph graph = new Graph("../../../data/distances.csv");
 
-
-
-            var path = graph.ShortestPath("Lyon", "Rouen");
-
-            Console.WriteLine("Shortest path : " + string.Join(" -> ", path.Item1));
-
-
             Salarie testttete = Org.chauffeurLibre(new DateTime(2023, 1, 9));
 
-            Console.Write("euh");
-
-            Commande commande1 = new Commande(clientsList[0], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), DateTime.Now + new TimeSpan(1, 0, 0));
-            Commande commande2 = new Commande(clientsList[1], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), DateTime.Now.AddDays(1));
+            Commande commande1 = new Commande(clientsList[0], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), DateTime.Now);
+            Commande commande2 = new Commande(clientsList[1], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), DateTime.Now);
 
             List<Commande> listCommande = new List<Commande>();
             listCommande.Add(commande1);
@@ -38,50 +29,12 @@ namespace TransConnect
 
 
             mainMenu(Org, clientsList, listCommande, graph);
-
-            // client json to client object
-            //List<Client> l1 = Client.FileToObj("../../../dataClient.json");
-
-            //Client test = new Client("Abril", "Aarrane", new DateTime(2015, 12, 31), "19, place de Miremont 47300 VILLENEUVE-SUR-LOT", "pierre.dupond@gmail.com", "016391645",
-            //null);
-
-            //Client.Add(l1, test);
-            // Client.Delete(l1, "Margand");
-            //Client.Modify(l1, "Authier");
-            // foreach (Client client in l1)
-            //     Console.WriteLine(client);
-
-            //// client object to client json
-            //Client.ObjToFile(l1, "../../../data/testClient.json");
-
-            // json to object
-
-            //Org.Afficher();
-            //Salarie nouveau = new Salarie(1093847, "Grateau", "Valentin", new DateTime(2002, 09, 13), "Fresnes", "valentin.grateau@gmail.com", "0782082123", new DateTime(2014, 07, 20), "chauffeur", 2000);
-            //Salarie nouveau2 = new Salarie(1093847, "Dorschner", "Guillaume", new DateTime(2002, 09, 13), "Fresnes", "valentin.grateau@gmail.com", "0782082123", new DateTime(2014, 07, 20), "chauffeur", 2000);
-            //Salarie nouveau3 = new Salarie(1093847, "Hollande", "François", new DateTime(2002, 09, 13), "Fresnes", "valentin.grateau@gmail.com", "0782082123", new DateTime(2014, 07, 20), "chauffeur", 2000);
-
-            //Salarie toutouuott = Org.chauffeurLibre(new DateTime(2024, 1, 9));
-
-
-            // Console.WriteLine("Ancienneté : " + nouveau.Anciennete() + " mois");
-            // Console.WriteLine("Prix de la commande " + commande.tarifFinal() + " €");
-            // Org.Add("Romu", "Pierpont", nouveau);
-            // Org.Add("Grateau", "Valentin", nouveau2);
-            // Org.Add("Romu", "Pierpont", nouveau3);
-
-            //Org.Delete("Royal", "Theodore");
-
-            // Org.Afficher();
-
-
-
         }
 
         static void mainMenu(Organigramme org, List<Client> listClients, List<Commande> listCommandes, Graph graph)
         {
             bool exit = false;
-            ConsoleKeyInfo cki;
+
             do
             {
                 Console.WriteLine("Sur quelle interface souhaitez vous vous rendre :\n"
@@ -112,8 +65,8 @@ namespace TransConnect
                     case 5:
                         try
                         {
-                            File.WriteAllText("../../../data.json", Newtonsoft.Json.JsonConvert.SerializeObject(org));
-                            Client.ObjToFile(listClients, "../../../dataClient.json");
+                            File.WriteAllText("../../../data/data.json", Newtonsoft.Json.JsonConvert.SerializeObject(org));
+                            Client.ObjToFile(listClients, "../../../data/dataClient.json");
                             Console.WriteLine("Fichiers sauvegardés avec succés");
                         }
                         catch (FileNotFoundException f)
@@ -137,7 +90,7 @@ namespace TransConnect
         static void salarieMenu(Organigramme Org, List<Client> listClients, List<Commande> listCommandes)
         {
             bool exit = false;
-            ConsoleKeyInfo cki;
+
             do
             {
                 Org.Afficher();
@@ -204,7 +157,7 @@ namespace TransConnect
         {
 
             bool exit = false;
-            ConsoleKeyInfo cki;
+
             do
             {
                 foreach (Client i in clientsList) Console.WriteLine(i.ToString());
@@ -362,7 +315,7 @@ namespace TransConnect
         {
 
             bool exit = false;
-            ConsoleKeyInfo cki;
+
             do
             {
 
@@ -463,7 +416,7 @@ namespace TransConnect
         {
 
             bool exit = false;
-            ConsoleKeyInfo cki;
+
             do
             {
 
