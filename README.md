@@ -27,7 +27,7 @@ What things you need to install the software and how to install them. For exampl
 A step by step series of examples that tell you how to get a development environment running. For example:
 
 ```
-git clone https://github.com/your_username/transconnect_project.git
+git clone https://github.com/vgrateauge1/TransConnect.git
 ```
 Then it is best to go to Visual Studio to run it.
 If we have time, we will make a docker image (maybe).
