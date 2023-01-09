@@ -3,12 +3,10 @@ namespace TransConnect
 {
 	public abstract class Vehicule
 	{
-		protected Salarie chauffeur;
 		protected string immatriculation;
 
-		public Vehicule(Salarie chauffeur, string immatriculation)
+		public Vehicule(string immatriculation)
 		{
-			this.chauffeur = chauffeur;
 			this.immatriculation = immatriculation;
 		}
 	}

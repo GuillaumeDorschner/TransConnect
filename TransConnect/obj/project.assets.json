@@ -162,6 +162,15 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Office.Interop.Excel/15.0.4795.1001": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Office.Interop.Excel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Office.Interop.Excel.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.2": {
         "type": "package",
         "compile": {
@@ -457,6 +466,19 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Microsoft.Office.Interop.Excel/15.0.4795.1001": {
+      "sha512": "cuvqi/U5MYSM0gvR2l90q0m/urRgmg69EiwP5VWp1RcaJ0YT5G26Va5LaOZ3KJFc22FNihS5CUjeePUp2YpGQA==",
+      "type": "package",
+      "path": "microsoft.office.interop.excel/15.0.4795.1001",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/Microsoft.Office.Interop.Excel.dll",
+        "lib/netstandard2.0/Microsoft.Office.Interop.Excel.dll",
+        "microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512",
+        "microsoft.office.interop.excel.nuspec"
+      ]
+    },
     "Newtonsoft.Json/13.0.2": {
       "sha512": "R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
       "type": "package",
@@ -618,23 +640,24 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.Extensions.Configuration.Json >= 7.0.0",
+      "Microsoft.Office.Interop.Excel >= 15.0.4795.1001",
       "Newtonsoft.Json >= 13.0.2"
     ]
   },
   "packageFolders": {
-    "/Users/valentin/.nuget/packages/": {}
+    "/Users/guillaumedorschner/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/valentin/Projects/TransConnect/TransConnect/TransConnect.csproj",
+      "projectUniqueName": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/TransConnect.csproj",
       "projectName": "TransConnect",
-      "projectPath": "/Users/valentin/Projects/TransConnect/TransConnect/TransConnect.csproj",
-      "packagesPath": "/Users/valentin/.nuget/packages/",
-      "outputPath": "/Users/valentin/Projects/TransConnect/TransConnect/obj/",
+      "projectPath": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/TransConnect.csproj",
+      "packagesPath": "/Users/guillaumedorschner/.nuget/packages/",
+      "outputPath": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/valentin/.nuget/NuGet/NuGet.Config"
+        "/Users/guillaumedorschner/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -662,6 +685,10 @@
             "target": "Package",
             "version": "[7.0.0, )"
           },
+          "Microsoft.Office.Interop.Excel": {
+            "target": "Package",
+            "version": "[15.0.4795.1001, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.2, )"
@@ -683,7 +710,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -21,7 +21,10 @@ namespace TransConnect
             this.vehicule = vehicule;
             this.chauffeur = chauffeur;
             this.dateLivraison = dateLivraison;
-            this.prix = (int)(calculPrixAnciennete(this));
+            this.prix = (int)calculPrixCommande(this);
+            this.client.Commande.Enqueue(this);
+            this.chauffeur.Commande.Enqueue(this);
+
         }
 
         public Client Client
@@ -54,17 +57,29 @@ namespace TransConnect
             get { return dateLivraison; }
         }
 
-        public static float calculPrixAnciennete(Commande a)
+        public static double calculPrixCommande(Commande a)
         {
-            float res = 0;
+            double res = 0;
             res = a.Livraison.Distance / 3;
-            res =  res + (a.Chauffeur.Anciennete().Days ) * 50;
+            res =  res + a.Chauffeur.Anciennete();
+
+            double type = 0;
+            if (a.Vehicule.GetType() == typeof(Voiture)) type = 1;
+            else if(a.Vehicule.GetType() == typeof(Camionnette)) type = 1.5;
+            else type = 2;
+
+            res = res * type;
             return res;
         }
 
-        public float tarifFinal()
+        public double tarifFinal()
         {
-            return calculPrixAnciennete(this);
+            return calculPrixCommande(this);
+        }
+
+        public override string ToString()
+        {
+            return "Client : " + this.client.Nom + " " + this.client.Prenom + "\nLivraison : " + this.livraison.PointA + " - " + this.livraison.PointB + "\nPrix : " + this.prix + "€ \nVehicule : " + this.vehicule.ToString() + " \nChauffeur : " + this.chauffeur.Nom + " " + this.chauffeur.Prenom + " \nDate de livraison : " + this.dateLivraison;
         }
 
     }

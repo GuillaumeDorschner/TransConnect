@@ -21,9 +21,8 @@ namespace TransConnect
         /// <param name="chauffeur"></param>
         /// <param name="immatriculation"></param>
         /// <param name="type">1 : Camion Citerne, 2 : Camion Benne, 3 : Camion Frigorifique</param>
-        public Camion(Salarie chauffeur, string immatriculation,int type) : base(chauffeur,immatriculation)
+        public Camion(string immatriculation,int type) : base(immatriculation)
 		{
-            this.chauffeur = chauffeur;
             this.immatriculation = immatriculation;
 
             switch (type)
@@ -45,6 +44,11 @@ namespace TransConnect
                     break;                
             }
 		}
-	}
+
+        public override string ToString()
+        {
+            return "Camion : " + this.immatriculation;
+        }
+    }
 }
 

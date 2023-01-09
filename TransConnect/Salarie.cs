@@ -6,14 +6,15 @@ namespace TransConnect
 {
     public class Salarie : Personne
     {
-        protected int numeroSS;
+        protected long numeroSS;
         protected DateTime arrivee;
         protected string poste;
         protected int salaire;
         protected Salarie frere;
         protected Salarie enfant;
+        protected Queue<Commande> commande;
 
-        public Salarie(int numeroSS, string nom, string prenom, DateTime naissance, string adressePostale, string adresseMail, string portable,
+        public Salarie(long numeroSS, string nom, string prenom, DateTime naissance, string adressePostale, string adresseMail, string portable,
             DateTime arrivee, string poste, int salaire) : base(nom, prenom, naissance, adressePostale, adresseMail, portable)
         {
             this.numeroSS = numeroSS;
@@ -26,6 +27,12 @@ namespace TransConnect
             this.arrivee = arrivee;
             this.poste = poste;
             this.salaire = salaire;
+            this.commande = new Queue<Commande>();
+        }
+
+        public Queue<Commande> Commande
+        {
+            get { return commande; }
         }
 
         public override string ToString()
@@ -35,7 +42,7 @@ namespace TransConnect
             return $"{titre}  {nom} {prenom} / {poste}";
         }
 
-        public int NumeroSS
+        public long NumeroSS
         {
             get { return numeroSS; }
         }
@@ -69,12 +76,11 @@ namespace TransConnect
             set { enfant = value; }
         }
 
-        public TimeSpan Anciennete()
+        public int Anciennete()
         {
             TimeSpan res = DateTime.Now.Subtract(Arrivee);
-            return res;
+            return res.Days / 30;
         }
-
 
     }
 }

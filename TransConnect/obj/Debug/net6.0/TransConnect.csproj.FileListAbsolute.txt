@@ -54,3 +54,4 @@
 /Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.csproj.CopyComplete
 /Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/Debug/net6.0/TransConnect.genruntimeconfig.cache
 /Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/Debug/net6.0/ref/TransConnect.dll
+/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/bin/Debug/net6.0/Microsoft.Office.Interop.Excel.dll

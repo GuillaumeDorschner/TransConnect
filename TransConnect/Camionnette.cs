@@ -3,14 +3,16 @@ namespace TransConnect
 {
 	public class Camionnette : Vehicule
 	{
-		protected string usage;
 
-		public Camionnette(Salarie chauffeur, string usage, string immatriculation) : base(chauffeur,immatriculation)
+		public Camionnette(string immatriculation) : base(immatriculation)
 		{
-			this.chauffeur = chauffeur;
-			this.usage = usage;
 			this.immatriculation = immatriculation;
 		}
-	}
+
+        public override string ToString()
+        {
+            return "Camionnette : " + this.immatriculation;
+        }
+    }
 }
 
