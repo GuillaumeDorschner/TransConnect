@@ -76,6 +76,10 @@ namespace TransConnect
             set { enfant = value; }
         }
 
+        /// <summary>
+        /// Calcul de l'ancienneté d'un salarié par rapport à la date actuelle
+        /// </summary>
+        /// <returns>Un nombre de mois</returns>
         public int Anciennete()
         {
             TimeSpan res = DateTime.Now.Subtract(Arrivee);

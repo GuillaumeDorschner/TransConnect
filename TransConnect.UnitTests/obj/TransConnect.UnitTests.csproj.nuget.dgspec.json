@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect.UnitTests/TransConnect.UnitTests.csproj": {}
+    "/Users/valentin/Projects/TransConnect/TransConnect.UnitTests/TransConnect.UnitTests.csproj": {}
   },
   "projects": {
-    "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect.UnitTests/TransConnect.UnitTests.csproj": {
+    "/Users/valentin/Projects/TransConnect/TransConnect.UnitTests/TransConnect.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect.UnitTests/TransConnect.UnitTests.csproj",
+        "projectUniqueName": "/Users/valentin/Projects/TransConnect/TransConnect.UnitTests/TransConnect.UnitTests.csproj",
         "projectName": "TransConnect.UnitTests",
-        "projectPath": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect.UnitTests/TransConnect.UnitTests.csproj",
-        "packagesPath": "/Users/guillaumedorschner/.nuget/packages/",
-        "outputPath": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect.UnitTests/obj/",
+        "projectPath": "/Users/valentin/Projects/TransConnect/TransConnect.UnitTests/TransConnect.UnitTests.csproj",
+        "packagesPath": "/Users/valentin/.nuget/packages/",
+        "outputPath": "/Users/valentin/Projects/TransConnect/TransConnect.UnitTests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/guillaumedorschner/.nuget/NuGet/NuGet.Config"
+          "/Users/valentin/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/TransConnect.csproj": {
-                "projectPath": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/TransConnect.csproj"
+              "/Users/valentin/Projects/TransConnect/TransConnect/TransConnect.csproj": {
+                "projectPath": "/Users/valentin/Projects/TransConnect/TransConnect/TransConnect.csproj"
               }
             }
           }
@@ -75,21 +75,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/TransConnect.csproj": {
+    "/Users/valentin/Projects/TransConnect/TransConnect/TransConnect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/TransConnect.csproj",
+        "projectUniqueName": "/Users/valentin/Projects/TransConnect/TransConnect/TransConnect.csproj",
         "projectName": "TransConnect",
-        "projectPath": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/TransConnect.csproj",
-        "packagesPath": "/Users/guillaumedorschner/.nuget/packages/",
-        "outputPath": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/obj/",
+        "projectPath": "/Users/valentin/Projects/TransConnect/TransConnect/TransConnect.csproj",
+        "packagesPath": "/Users/valentin/.nuget/packages/",
+        "outputPath": "/Users/valentin/Projects/TransConnect/TransConnect/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/guillaumedorschner/.nuget/NuGet/NuGet.Config"
+          "/Users/valentin/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -142,7 +142,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -51,6 +51,11 @@ namespace TransConnect
             return a.achatsCumule().CompareTo(b.achatsCumule());
         }
 
+        /// <summary>
+        /// Permet de lire les clients d'un fichier .json et de les mettre dans une List
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns>Une List de Client</returns>
         public static List<Client> FileToObj(string path)
         {
             List<Client> clients = new List<Client>();
@@ -68,6 +73,11 @@ namespace TransConnect
 
         }
 
+        /// <summary>
+        /// Permet de sauvegarder la liste de clients dans un fichier .json
+        /// </summary>
+        /// <param name="clients"></param>
+        /// <param name="path"></param>
         public static void ObjToFile(List<Client> clients, string path)
         {
             try

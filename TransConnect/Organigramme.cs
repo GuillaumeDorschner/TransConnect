@@ -62,6 +62,13 @@ namespace TransConnect
             if (node.Enfant != null) Afficher(node.Enfant, level + 1);
             if (node.Frere != null) Afficher(node.Frere, level);
         }
+
+        /// <summary>
+        /// Permet de trouver un salarié dans l'organigramme à partir de son nom et prénom
+        /// </summary>
+        /// <param name="nom"></param>
+        /// <param name="prenom"></param>
+        /// <returns>Le salarié trouvé</returns>
         public Salarie Find(string nom, string prenom)
         {
             return Find(nom, prenom, this.pdg);
@@ -83,6 +90,13 @@ namespace TransConnect
             }
             else return null;
         }
+
+        /// <summary>
+        /// Permet d'ajouter un salarié à l'oganigramme
+        /// </summary>
+        /// <param name="managerNom"></param>
+        /// <param name="managerPrenom"></param>
+        /// <param name="embauche"></param>
         public void Add(string managerNom, string managerPrenom, Salarie embauche)
         {
             Salarie manager = this.Find(managerNom, managerPrenom);
@@ -110,6 +124,13 @@ namespace TransConnect
             }
         }
 
+
+        /// <summary>
+        /// Permet de trouver le parent d'un enfant recherché
+        /// </summary>
+        /// <param name="nom"></param>
+        /// <param name="prenom"></param>
+        /// <returns>Le manager du salarié recherché</returns>
         public Salarie FindEnfant(string nom, string prenom)
         {
             return FindEnfant(nom, prenom, this.pdg);
@@ -133,6 +154,12 @@ namespace TransConnect
             else return null;
         }
 
+        /// <summary>
+        /// Permet de trouver le frère du salaroé recherché
+        /// </summary>
+        /// <param name="nom"></param>
+        /// <param name="prenom"></param>
+        /// <returns>Le frère du salarié</returns>
         public Salarie FindFrere(string nom, string prenom)
         {
             return FindFrere(nom, prenom, this.pdg);
@@ -155,6 +182,12 @@ namespace TransConnect
             }
             else return null;
         }
+
+        /// <summary>
+        /// Permet de supprimer un salarié
+        /// </summary>
+        /// <param name="licencieNom"></param>
+        /// <param name="licenciePrenom"></param>
         public void Delete(string licencieNom, string licenciePrenom)
         {
             Salarie licencie = this.FindEnfant(licencieNom, licenciePrenom);
@@ -185,6 +218,12 @@ namespace TransConnect
 
         }
 
+
+        /// <summary>
+        /// Test les chauffeurs afin d'en trouver un libre pour l'assigner à une commande
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns>Un chauffeur disponible</returns>
         public Salarie chauffeurLibre(DateTime date)
         {
             return chauffeurLibre(date, this.pdg);
