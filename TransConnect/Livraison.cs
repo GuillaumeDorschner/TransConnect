@@ -22,11 +22,13 @@ namespace TransConnect
         public string PointA
         {
             get { return pointA; }
+            set { pointA = value; }
         }
 
         public string PointB
         {
             get { return pointB; }
+            set { pointB = value; }
         }
 
         public int Distance
@@ -39,7 +41,10 @@ namespace TransConnect
             get { return tempsTrajet; }
         }
 
-
+        public string Chemin
+        {
+            get { return chemin; }
+        }
     }
 }
 

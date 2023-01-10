@@ -429,7 +429,85 @@ namespace TransConnect
 
                         break;
                     case 2:
-                        Console.WriteLine("En cours");
+                        Console.WriteLine("Veuillez rentrer le nom du client sur la commande :");
+                        string nomModify = Console.ReadLine();
+                        Console.WriteLine("Ainsi que son prénom :");
+                        string prenomModify = Console.ReadLine();
+                        Console.WriteLine("Ville de départ :");
+                        string villeDepart = Console.ReadLine();
+                        Console.WriteLine("Et la ville d'arrivée :");
+                        string villeArrivee = Console.ReadLine();
+
+                        Commande modify = listCommandes.Find((Commande a) => a.Client.Nom == nomModify && a.Client.Prenom == prenomModify && a.Livraison.PointA==villeDepart && a.Livraison.PointB == villeArrivee);
+                        if (modify == null) Console.WriteLine("Commande à modifier introuvable");
+                        else
+                        {
+                            Console.WriteLine("Voici le client que vous voulez modifier : \n");
+                            Console.WriteLine(modify.ToString());
+
+
+                            bool valide = false;
+
+                            while (!valide)
+                            {
+                                Console.WriteLine("Quelle donnée de la commande souhaitez vous modifier : \n" +
+                                    "1 : nom du client \n" +
+                                    "2 : prénom du client\n" +
+                                    "3 : ville de départ\n" +
+                                    "4 : ville d'arrivée \n" );
+                                int choix = Int32.Parse(Console.ReadLine());
+
+                                switch (choix)
+                                {
+                                    case 1:
+                                        Console.WriteLine("Entrer le nouveau nom :");
+                                        string change = Console.ReadLine();
+                                        if (change != null)
+                                        {
+                                            modify.Client.Nom = change;
+                                            valide = true;
+                                        }
+                                        else Console.WriteLine("Aucun nom rentré ");
+                                        break;
+                                    case 2:
+                                        Console.WriteLine("Entrer le nouveau prénom :");
+                                        change = Console.ReadLine();
+                                        if (change != null)
+                                        {
+                                            modify.Client.Prenom = change;
+                                            valide = true;
+                                        }
+                                        else Console.WriteLine("Aucun prénom rentré ");
+                                        break;
+                                    case 3:
+                                        Console.WriteLine("Entrer la nouvelle ville de départ :");
+                                        string newDepart = Console.ReadLine();
+                                        if (newDepart != null)
+                                        {
+                                            modify.Livraison.PointA = newDepart;
+                                            modify = new Commande(modify.Client, new Livraison(graph, newDepart,modify.Livraison.PointB), modify.Vehicule, modify.Chauffeur, modify.DateLivraison);
+                                            valide = true;
+                                        }
+                                        else Console.WriteLine("Aucune ville rentrée ");
+                                        break;
+                                    case 4:
+                                        Console.WriteLine("Entrer la nouvelle ville d'arrivée :");
+                                        string newArrivee = Console.ReadLine();
+                                        if (newArrivee != null)
+                                        {
+                                            modify.Livraison.PointB = newArrivee;
+                                            modify = new Commande(modify.Client, new Livraison(graph, modify.Livraison.PointA, newArrivee), modify.Vehicule, modify.Chauffeur, modify.DateLivraison);
+                                            valide = true;
+                                        }
+                                        else Console.WriteLine("Aucune ville rentrée ");
+                                        break;
+                                    default:
+                                        Console.WriteLine("Veuillez rentrer un numéro valide");
+                                        break;
+                                }
+                            }
+
+                        }
                         break;
                     case 3:
                         foreach (Commande commande in listCommandes)
