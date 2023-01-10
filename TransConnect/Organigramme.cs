@@ -21,6 +21,11 @@ namespace TransConnect
             this.nom = "TransConnect";
         }
 
+        public Salarie Pdg
+        {
+            get { return this.pdg; }
+        }
+
         /// <summary>
         /// affiche l'organigramme d'une entreprise sous forme de liste hiérarchique à partir du PDG
         /// </summary>

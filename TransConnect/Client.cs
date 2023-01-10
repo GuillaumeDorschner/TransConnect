@@ -1,4 +1,6 @@
 ﻿using System;
+using Newtonsoft.Json;
+
 namespace TransConnect
 {
     public class Client : Personne, ITris
@@ -48,7 +50,7 @@ namespace TransConnect
 
         public int TriAchatCumul(Client a, Client b) //A tester pas de delegte car je ne sais pas comment faire
         {
-            return - a.achatsCumule().CompareTo(b.achatsCumule());
+            return -a.achatsCumule().CompareTo(b.achatsCumule());
         }
 
         /// <summary>
@@ -84,7 +86,7 @@ namespace TransConnect
             {
                 if (!File.Exists(path))
                 {
-                    File.WriteAllText(path, Newtonsoft.Json.JsonConvert.SerializeObject(clients));
+                    File.WriteAllText(path, Newtonsoft.Json.JsonConvert.SerializeObject(clients, Formatting.Indented));
                 }
             }
             catch (FileNotFoundException f)
