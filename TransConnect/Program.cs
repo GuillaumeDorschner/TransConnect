@@ -17,10 +17,16 @@ namespace TransConnect
             List<Client> clientsList = Client.FileToObj("../../../data/dataClient.json");
             Graph graph = new Graph("../../../data/distances.csv");
 
-            Salarie testttete = Org.chauffeurLibre(new DateTime(2023, 1, 9));
 
-            Commande commande1 = new Commande(clientsList[0], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), DateTime.Now);
-            Commande commande2 = new Commande(clientsList[1], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), DateTime.Now);
+            Commande commande1 = new Commande(clientsList[0], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
+            Commande commande2 = new Commande(clientsList[0], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
+            Commande commande3 = new Commande(clientsList[0], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
+            Commande commande4 = new Commande(clientsList[1], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
+            Commande commande5 = new Commande(clientsList[1], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
+            Commande commande6 = new Commande(clientsList[1], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
+
+
+            Salarie testttete = Org.chauffeurLibre(new DateTime(2023, 1, 9));
 
             List<Commande> listCommande = new List<Commande>();
             listCommande.Add(commande1);

@@ -16,6 +16,10 @@ namespace TransConnect
 
         public Commande(Client client, Livraison livraison, Vehicule vehicule, Salarie chauffeur, DateTime dateLivraison)
         {
+            if (chauffeur == null)
+            {
+                Console.WriteLine("Aucun chauffeur n'est disponible");
+            }
             this.client = client;
             this.livraison = livraison;
             this.vehicule = vehicule;
