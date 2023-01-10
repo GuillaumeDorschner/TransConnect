@@ -16,25 +16,7 @@ namespace TransConnect
             Organigramme Org = new Organigramme(salarie);
             List<Client> clientsList = Client.FileToObj("../../../data/dataClient.json");
             Graph graph = new Graph("../../../data/distances.csv");
-
-
-            Commande commande1 = new Commande(clientsList[0], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
-            Commande commande2 = new Commande(clientsList[0], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
-            Commande commande3 = new Commande(clientsList[0], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
-            Commande commande4 = new Commande(clientsList[1], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
-            Commande commande5 = new Commande(clientsList[1], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
-            Commande commande6 = new Commande(clientsList[1], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 10)), new DateTime(2023, 1, 9));
-
-
-            Salarie testttete = Org.chauffeurLibre(new DateTime(2023, 1, 9));
-
             List<Commande> listCommande = new List<Commande>();
-            listCommande.Add(commande1);
-            listCommande.Add(commande2);
-            listCommande.Add(commande3);
-            listCommande.Add(commande4);
-            listCommande.Add(commande5);
-            listCommande.Add(commande6);
 
             mainMenu(Org, clientsList, listCommande, graph);
         }
@@ -315,7 +297,7 @@ namespace TransConnect
                             "\nL'ordre des priorités des tris est celui ci-dessus");
                         string input = Console.ReadLine();
 
-                       
+
                         if (input.Contains("p"))
                         {
                             clientsList.Sort(clientsList[0].TriPrenomNom);
@@ -410,17 +392,17 @@ namespace TransConnect
                         {
                             Console.WriteLine("Veuillez rentrer 1 pour un camion citerne, 2 pour un camion benne et 3 pour un camion frigorifique");
                             int camion = Int32.Parse(Console.ReadLine());
-                            if(camion == 1)
+                            if (camion == 1)
                             {
                                 newCommande = new Commande(clientCommande, livraison, new Camion("123", 1), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0));
                                 listCommandes.Add(newCommande);
                             }
-                            if(camion == 2)
+                            if (camion == 2)
                             {
                                 newCommande = new Commande(clientCommande, livraison, new Camion("123", 2), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0));
                                 listCommandes.Add(newCommande);
                             }
-                             if(camion == 3)
+                            if (camion == 3)
                             {
                                 newCommande = new Commande(clientCommande, livraison, new Camion("123", 3), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0));
                                 listCommandes.Add(newCommande);
