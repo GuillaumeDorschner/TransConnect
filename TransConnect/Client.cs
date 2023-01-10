@@ -48,7 +48,7 @@ namespace TransConnect
 
         public int TriAchatCumul(Client a, Client b) //A tester pas de delegte car je ne sais pas comment faire
         {
-            return a.achatsCumule().CompareTo(b.achatsCumule());
+            return - a.achatsCumule().CompareTo(b.achatsCumule());
         }
 
         /// <summary>
@@ -82,7 +82,10 @@ namespace TransConnect
         {
             try
             {
-                File.WriteAllText(path, Newtonsoft.Json.JsonConvert.SerializeObject(clients));
+                if (!File.Exists(path))
+                {
+                    File.WriteAllText(path, Newtonsoft.Json.JsonConvert.SerializeObject(clients));
+                }
             }
             catch (FileNotFoundException f)
             {
@@ -92,7 +95,7 @@ namespace TransConnect
 
         public override string ToString()
         {
-            return base.ToString() + " " + commande;
+            return base.ToString() + " Achats cumulés : " + this.achatsCumule();
         }
 
         public static void Add(List<Client> listClient, Client add)

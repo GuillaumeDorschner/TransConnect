@@ -38,7 +38,7 @@ namespace TransConnect
 			{
 				if((start <= i.DateLivraison) &&(i.DateLivraison <= stop))
 				{
-					Console.WriteLine(i.ToString());
+					Console.WriteLine(i.ToString() + "\n");
 				}
 			}
         }

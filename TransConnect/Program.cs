@@ -23,7 +23,7 @@ namespace TransConnect
             Commande commande3 = new Commande(clientsList[0], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
             Commande commande4 = new Commande(clientsList[1], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
             Commande commande5 = new Commande(clientsList[1], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
-            Commande commande6 = new Commande(clientsList[1], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
+            Commande commande6 = new Commande(clientsList[1], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 10)), new DateTime(2023, 1, 9));
 
 
             Salarie testttete = Org.chauffeurLibre(new DateTime(2023, 1, 9));
@@ -31,8 +31,10 @@ namespace TransConnect
             List<Commande> listCommande = new List<Commande>();
             listCommande.Add(commande1);
             listCommande.Add(commande2);
-
-
+            listCommande.Add(commande3);
+            listCommande.Add(commande4);
+            listCommande.Add(commande5);
+            listCommande.Add(commande6);
 
             mainMenu(Org, clientsList, listCommande, graph);
         }
@@ -71,7 +73,7 @@ namespace TransConnect
                     case 5:
                         try
                         {
-                            File.WriteAllText("../../../data/data.json", Newtonsoft.Json.JsonConvert.SerializeObject(org));
+                            File.WriteAllText("../../../data/datatest.json", Newtonsoft.Json.JsonConvert.SerializeObject(org));
                             Client.ObjToFile(listClients, "../../../data/dataClient.json");
                             Console.WriteLine("Fichiers sauvegardés avec succés");
                         }
@@ -171,7 +173,8 @@ namespace TransConnect
                                     + "1 : Créer un client \n"
                                     + "2 : Supprimer un client \n"
                                     + "3 : Modifier un client \n"
-                                    + "4 : Exit \n\n"
+                                    + "4 : Trier clients \n"
+                                    + "5 : Exit \n\n"
                                     + "\rSélectionnez l'action désirée :\n\n");
                 int exo = Int32.Parse(Console.ReadLine());
                 Console.Clear();
@@ -305,9 +308,32 @@ namespace TransConnect
                         break;
 
                     case 4:
-                        exit = true;
+                        Console.WriteLine("Voici la liste des tris :" +
+                            "\nTri par montant des achats cumulés (a)" +
+                            "\nTri par villes (v)" +
+                            "\nTri par ordre alphabétique (p)" +
+                            "\nL'ordre des priorités des tris est celui ci-dessus");
+                        string input = Console.ReadLine();
+
+                       
+                        if (input.Contains("p"))
+                        {
+                            clientsList.Sort(clientsList[0].TriPrenomNom);
+                        }
+                        if (input.Contains("v"))
+                        {
+                            clientsList.Sort(clientsList[0].TriVille);
+                        }
+                        if (input.Contains("a"))
+                        {
+                            clientsList.Sort(clientsList[0].TriAchatCumul);
+                        }
+
                         break;
 
+                    case 5:
+                        exit = true;
+                        break;
                     default:
                         Console.WriteLine("ce choix n'est pas disponible.");
                         break;
@@ -366,36 +392,40 @@ namespace TransConnect
                         string villeB = Console.ReadLine();
 
                         Livraison livraison = new Livraison(graph, villeA, villeB);
+                        Commande newCommande;
 
                         Console.WriteLine("Veuillez rentrer voiture si vous voulez une voiture, camionnette pour une camionnette ou camion pour un camion");
                         string vehicule = Console.ReadLine();
                         if (vehicule.ToLower() == "voiture")
                         {
-                            Commande newCommande = new Commande(clientCommande, livraison, new Voiture("123"), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0, 0));
+                            newCommande = new Commande(clientCommande, livraison, new Voiture("123"), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0, 0));
+                            listCommandes.Add(newCommande);
                         }
                         if (vehicule.ToLower() == "camionnette")
                         {
-                            Commande newCommande = new Commande(clientCommande, livraison, new Camionnette("123"), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0));
+                            newCommande = new Commande(clientCommande, livraison, new Camionnette("123"), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0));
+                            listCommandes.Add(newCommande);
                         }
                         if (vehicule.ToLower() == "camion")
                         {
                             Console.WriteLine("Veuillez rentrer 1 pour un camion citerne, 2 pour un camion benne et 3 pour un camion frigorifique");
                             int camion = Int32.Parse(Console.ReadLine());
-                            switch (camion)
+                            if(camion == 1)
                             {
-                                case 1:
-                                    Commande newCommande = new Commande(clientCommande, livraison, new Camion("123", 1), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0));
-                                    break;
-                                case 2:
-                                    Commande newCommande2 = new Commande(clientCommande, livraison, new Camion("123", 2), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0));
-                                    break;
-                                case 3:
-                                    Commande newCommande3 = new Commande(clientCommande, livraison, new Camion("123", 3), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0));
-                                    break;
+                                newCommande = new Commande(clientCommande, livraison, new Camion("123", 1), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0));
+                                listCommandes.Add(newCommande);
                             }
-
+                            if(camion == 2)
+                            {
+                                newCommande = new Commande(clientCommande, livraison, new Camion("123", 2), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0));
+                                listCommandes.Add(newCommande);
+                            }
+                             if(camion == 3)
+                            {
+                                newCommande = new Commande(clientCommande, livraison, new Camion("123", 3), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0));
+                                listCommandes.Add(newCommande);
+                            }
                         }
-
 
                         break;
                     case 2:
@@ -426,7 +456,7 @@ namespace TransConnect
             do
             {
 
-                Console.WriteLine("Quelle action souhaitez vous éxecuter sur vos commandes :\n"
+                Console.WriteLine("\n\nQuelle action souhaitez vous éxecuter sur vos commandes :\n"
                                     + "1 : Afficher par chauffeur le nombre de livraisons effectuées \n"
                                     + "2 : Afficher les commandes selon une période de temps \n"
                                     + "3 : Afficher la moyenne des prix des commandes \n"

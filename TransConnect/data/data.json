@@ -1,4 +1,4 @@
-﻿{
+{
   "numeroSS": 18601023,
   "nom": "Dupond",
   "prenom": "Pierre",
@@ -134,7 +134,7 @@
               "portable": "0770820109",
               "arrivee": "2010-07-26T00:00:00",
               "poste": "Chauffeur",
-              "salaire": 1000,
+              "salaire": 1000
             }
           }
         }
@@ -230,7 +230,7 @@
               "portable": "0159503534",
               "arrivee": "2010-07-26T00:00:00",
               "poste": "Controleur de Gestion",
-              "salaire": 1000,
+              "salaire": 1000
             }
           }
         }
