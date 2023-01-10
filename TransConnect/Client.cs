@@ -22,15 +22,15 @@ namespace TransConnect
             set { commande = value; }
         }
 
-		public int TriPrenomNom(Client a, Client b)
-		{
-			int x = a.Nom.CompareTo(b.Nom);
-			if(x==0)
-			{
-				x = x + a.Prenom.CompareTo(b.Prenom);
-			}
-			return x;
-		}
+        public int TriPrenomNom(Client a, Client b)
+        {
+            int x = a.Nom.CompareTo(b.Nom);
+            if (x == 0)
+            {
+                x = x + a.Prenom.CompareTo(b.Prenom);
+            }
+            return x;
+        }
         public int achatsCumule()
         {
             int sum = 0;
@@ -46,24 +46,38 @@ namespace TransConnect
             return a.adressePostale.CompareTo(b.adressePostale);
         }
 
-		public int TriAchatCumul(Client a, Client b) //A tester pas de delegte car je ne sais pas comment faire
-		{
-			return a.achatsCumule().CompareTo(b.achatsCumule());
+        public int TriAchatCumul(Client a, Client b) //A tester pas de delegte car je ne sais pas comment faire
+        {
+            return a.achatsCumule().CompareTo(b.achatsCumule());
         }
 
         public static List<Client> FileToObj(string path)
         {
             List<Client> clients = new List<Client>();
+            try
+            {
+                foreach (Client client in Newtonsoft.Json.JsonConvert.DeserializeObject<Client[]>(File.ReadAllText(path)))
+                    clients.Add(client);
 
-            foreach (Client client in Newtonsoft.Json.JsonConvert.DeserializeObject<Client[]>(File.ReadAllText(path)))
-                clients.Add(client);
-
+            }
+            catch (FileNotFoundException f)
+            {
+                Console.WriteLine(f.Message);
+            }
             return clients;
+
         }
 
         public static void ObjToFile(List<Client> clients, string path)
         {
-            File.WriteAllText(path, Newtonsoft.Json.JsonConvert.SerializeObject(clients));
+            try
+            {
+                File.WriteAllText(path, Newtonsoft.Json.JsonConvert.SerializeObject(clients));
+            }
+            catch (FileNotFoundException f)
+            {
+                Console.WriteLine(f.Message);
+            }
         }
 
         public override string ToString()
@@ -71,16 +85,16 @@ namespace TransConnect
             return base.ToString() + " " + commande;
         }
 
-        public static void Add(List<Client> listClient,Client add)
+        public static void Add(List<Client> listClient, Client add)
         {
             listClient.Add(add);
         }
 
-        public static void Delete(List<Client> listClient,string NameDelete)
+        public static void Delete(List<Client> listClient, string NameDelete)
         {
-            foreach(Client i in listClient)
+            foreach (Client i in listClient)
             {
-                if(i.Nom == NameDelete)
+                if (i.Nom == NameDelete)
                 {
                     listClient.Remove(i);
                     break;
@@ -179,10 +193,10 @@ namespace TransConnect
                         }
                     }
                 }
-            } 
+            }
             Console.WriteLine("Aucuns clients trouvé avec ce nom");
-                   
+
         }
-    
+
     }
 }

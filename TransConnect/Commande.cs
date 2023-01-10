@@ -2,7 +2,7 @@
 
 namespace TransConnect
 {
-    public class Commande 
+    public class Commande
     {
         protected Client client;
         protected Livraison livraison;
@@ -16,14 +16,18 @@ namespace TransConnect
 
         public Commande(Client client, Livraison livraison, Vehicule vehicule, Salarie chauffeur, DateTime dateLivraison)
         {
+            if (chauffeur == null)
+            {
+                Console.WriteLine("Aucun chauffeur n'est disponible");
+            }
             this.client = client;
             this.livraison = livraison;
             this.vehicule = vehicule;
             this.chauffeur = chauffeur;
             this.dateLivraison = dateLivraison;
-            this.prix = (int)calculPrixCommande(this);
             this.client.Commande.Enqueue(this);
             this.chauffeur.Commande.Enqueue(this);
+            this.prix = (int)calculPrixCommande(this);
 
         }
 
@@ -61,11 +65,11 @@ namespace TransConnect
         {
             double res = 0;
             res = a.Livraison.Distance / 3;
-            res =  res + a.Chauffeur.Anciennete();
+            res = res + a.Chauffeur.Anciennete();
 
             double type = 0;
             if (a.Vehicule.GetType() == typeof(Voiture)) type = 1;
-            else if(a.Vehicule.GetType() == typeof(Camionnette)) type = 1.5;
+            else if (a.Vehicule.GetType() == typeof(Camionnette)) type = 1.5;
             else type = 2;
 
             res = res * type;
