@@ -55,7 +55,7 @@ namespace TransConnect
                     case 5:
                         try
                         {
-                            File.WriteAllText("../../../data/datatest.json", Newtonsoft.Json.JsonConvert.SerializeObject(org));
+                            File.WriteAllText("../../../data/datatest.json", Newtonsoft.Json.JsonConvert.SerializeObject(org.Pdg, Formatting.Indented));
                             Client.ObjToFile(listClients, "../../../data/dataClient.json");
                             Console.WriteLine("Fichiers sauvegardés avec succés");
                         }
