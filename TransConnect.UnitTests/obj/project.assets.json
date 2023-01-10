@@ -1779,7 +1779,7 @@
           }
         }
       },
-      "System.Text.Json/7.0.0": {
+      "System.Text.Json/7.0.1": {
         "type": "package",
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
@@ -1929,7 +1929,8 @@
         "dependencies": {
           "Microsoft.Extensions.Configuration.Json": "7.0.0",
           "Microsoft.Office.Interop.Excel": "15.0.4795.1001",
-          "Newtonsoft.Json": "13.0.2"
+          "Newtonsoft.Json": "13.0.2",
+          "System.Text.Json": "7.0.1"
         },
         "compile": {
           "bin/placeholder/TransConnect.dll": {}
@@ -6125,10 +6126,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Text.Json/7.0.0": {
-      "sha512": "DaGSsVqKsn/ia6RG8frjwmJonfos0srquhw09TlT8KRw5I43E+4gs+/bZj4K0vShJ5H9imCuXupb4RmS+dBy3w==",
+    "System.Text.Json/7.0.1": {
+      "sha512": "OtDEmCCiNl8JAduFKZ/r0Sw6XZNHwIicUYy/mXgMDGeOsZLshH37qi3oPRzFYiryVktiMoQLByMGPtRCEMYbeQ==",
       "type": "package",
-      "path": "system.text.json/7.0.0",
+      "path": "system.text.json/7.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6191,7 +6192,7 @@
         "lib/net7.0/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.7.0.0.nupkg.sha512",
+        "system.text.json.7.0.1.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -6649,19 +6650,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/guillaumedorschner/.nuget/packages/": {}
+    "/Users/valentin/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect.UnitTests/TransConnect.UnitTests.csproj",
+      "projectUniqueName": "/Users/valentin/Projects/TransConnect/TransConnect.UnitTests/TransConnect.UnitTests.csproj",
       "projectName": "TransConnect.UnitTests",
-      "projectPath": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect.UnitTests/TransConnect.UnitTests.csproj",
-      "packagesPath": "/Users/guillaumedorschner/.nuget/packages/",
-      "outputPath": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect.UnitTests/obj/",
+      "projectPath": "/Users/valentin/Projects/TransConnect/TransConnect.UnitTests/TransConnect.UnitTests.csproj",
+      "packagesPath": "/Users/valentin/.nuget/packages/",
+      "outputPath": "/Users/valentin/Projects/TransConnect/TransConnect.UnitTests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/guillaumedorschner/.nuget/NuGet/NuGet.Config"
+        "/Users/valentin/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -6673,8 +6674,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/TransConnect.csproj": {
-              "projectPath": "/Users/guillaumedorschner/Library/Mobile Documents/com~apple~CloudDocs/Ecole/4 - ESILV/A3/C#/Project/TransConnect/TransConnect/TransConnect.csproj"
+            "/Users/valentin/Projects/TransConnect/TransConnect/TransConnect.csproj": {
+              "projectPath": "/Users/valentin/Projects/TransConnect/TransConnect/TransConnect.csproj"
             }
           }
         }
@@ -6722,7 +6723,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }

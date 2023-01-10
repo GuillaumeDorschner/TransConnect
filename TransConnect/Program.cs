@@ -18,6 +18,12 @@ namespace TransConnect
             Graph graph = new Graph("../../../data/distances.csv");
             List<Commande> listCommande = new List<Commande>();
 
+            Commande commande1 = new Commande(clientsList[0], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
+
+            listCommande.Add(commande1);
+
+
+
             mainMenu(Org, clientsList, listCommande, graph);
         }
 
@@ -55,7 +61,7 @@ namespace TransConnect
                     case 5:
                         try
                         {
-                            File.WriteAllText("../../../data/datatest.json", Newtonsoft.Json.JsonConvert.SerializeObject(org.Pdg, Formatting.Indented));
+                            File.WriteAllText("../../../data/data.json", Newtonsoft.Json.JsonConvert.SerializeObject(org.Pdg, Formatting.Indented));
                             Client.ObjToFile(listClients, "../../../data/dataClient.json");
                             Console.WriteLine("Fichiers sauvegardés avec succés");
                         }
@@ -373,6 +379,19 @@ namespace TransConnect
                         Console.WriteLine("Veuillez entrer une ville d'arrivée :");
                         string villeB = Console.ReadLine();
 
+                        DateTime today = DateTime.Today;
+                        DateTime chosenDate;
+
+                        do
+                        {
+                            Console.WriteLine("Veuillez choisir une date (jj/mm/aaaa) :");
+                            chosenDate = DateTime.Parse(Console.ReadLine());
+                            if (chosenDate < today)
+                            {
+                                Console.WriteLine("La date choisie ne peut pas être inférieure à la date d'aujourd'hui.");
+                            }
+                        } while (chosenDate < today);
+
                         Livraison livraison = new Livraison(graph, villeA, villeB);
                         Commande newCommande;
 
@@ -380,13 +399,15 @@ namespace TransConnect
                         string vehicule = Console.ReadLine();
                         if (vehicule.ToLower() == "voiture")
                         {
-                            newCommande = new Commande(clientCommande, livraison, new Voiture("123"), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0, 0));
-                            listCommandes.Add(newCommande);
+                            newCommande = new Commande(clientCommande, livraison, new Voiture("123"), org.chauffeurLibre(chosenDate), chosenDate);
+                            if (newCommande.Chauffeur != null)
+                            { listCommandes.Add(newCommande); }
                         }
                         if (vehicule.ToLower() == "camionnette")
                         {
-                            newCommande = new Commande(clientCommande, livraison, new Camionnette("123"), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0));
-                            listCommandes.Add(newCommande);
+                            newCommande = new Commande(clientCommande, livraison, new Camionnette("123"), org.chauffeurLibre(chosenDate), chosenDate);
+                            if (newCommande.Chauffeur != null)
+                            { listCommandes.Add(newCommande); }
                         }
                         if (vehicule.ToLower() == "camion")
                         {
@@ -394,18 +415,21 @@ namespace TransConnect
                             int camion = Int32.Parse(Console.ReadLine());
                             if (camion == 1)
                             {
-                                newCommande = new Commande(clientCommande, livraison, new Camion("123", 1), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0));
-                                listCommandes.Add(newCommande);
+                                newCommande = new Commande(clientCommande, livraison, new Camion("123", 1), org.chauffeurLibre(chosenDate), chosenDate);
+                                if (newCommande.Chauffeur != null)
+                                { listCommandes.Add(newCommande); }
                             }
                             if (camion == 2)
                             {
-                                newCommande = new Commande(clientCommande, livraison, new Camion("123", 2), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0));
-                                listCommandes.Add(newCommande);
+                                newCommande = new Commande(clientCommande, livraison, new Camion("123", 2), org.chauffeurLibre(chosenDate), chosenDate);
+                                if (newCommande.Chauffeur != null)
+                                { listCommandes.Add(newCommande); }
                             }
                             if (camion == 3)
                             {
-                                newCommande = new Commande(clientCommande, livraison, new Camion("123", 3), org.chauffeurLibre(DateTime.Now), DateTime.Now + new TimeSpan(1, 0, 0));
-                                listCommandes.Add(newCommande);
+                                newCommande = new Commande(clientCommande, livraison, new Camion("123", 3), org.chauffeurLibre(chosenDate), chosenDate);
+                                if (newCommande.Chauffeur != null)
+                                { listCommandes.Add(newCommande); }
                             }
                         }
 
@@ -432,7 +456,7 @@ namespace TransConnect
 
                             while (!valide)
                             {
-                                Console.WriteLine("Quelle donnée de la commande souhaitez vous modifier : \n" +
+                                Console.WriteLine("\n\nQuelle donnée de la commande souhaitez vous modifier : \n" +
                                     "1 : nom du client \n" +
                                     "2 : prénom du client\n" +
                                     "3 : ville de départ\n" +

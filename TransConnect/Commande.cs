@@ -16,14 +16,18 @@ namespace TransConnect
 
         public Commande(Client client, Livraison livraison, Vehicule vehicule, Salarie chauffeur, DateTime dateLivraison)
         {
-            if (chauffeur == null)
-            {
-                Console.WriteLine("Aucun chauffeur n'est disponible");
-            }
             this.client = client;
             this.livraison = livraison;
             this.vehicule = vehicule;
-            this.chauffeur = chauffeur;
+            if(chauffeur != null)
+            {
+                this.chauffeur = chauffeur;
+            }
+            else
+            {
+                Console.WriteLine("Aucun chauffeur n'est disponible pour livrer ce jour");
+                return;
+            }
             this.dateLivraison = dateLivraison;
             this.client.Commande.Enqueue(this);
             this.chauffeur.Commande.Enqueue(this);
@@ -83,7 +87,7 @@ namespace TransConnect
 
         public override string ToString()
         {
-            return "Client : " + this.client.Nom + " " + this.client.Prenom + "\nLivraison : " + this.livraison.PointA + " - " + this.livraison.PointB + "\nPrix : " + this.prix + "€ \nVehicule : " + this.vehicule.ToString() + " \nChauffeur : " + this.chauffeur.Nom + " " + this.chauffeur.Prenom + " \nDate de livraison : " + this.dateLivraison;
+            return "Client : " + this.client.Nom + " " + this.client.Prenom + "\nLivraison : " + this.livraison.PointA + " - " + this.livraison.PointB + "\nPrix : " + this.prix + "€ \nVehicule : " + this.vehicule.ToString() + " \nChauffeur : " + this.chauffeur.Nom + " " + this.chauffeur.Prenom + " \nDate de livraison : " + this.dateLivraison + "\n";
         }
 
     }
