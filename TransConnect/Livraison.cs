@@ -45,6 +45,11 @@ namespace TransConnect
         {
             get { return chemin; }
         }
+
+        public override string ToString()
+        {
+            return "\nLivraison : " + this.PointA + " - " + this.PointB + "\nChemin de la livraison : " + this.Chemin + "\nDistance : " + this.distance + " km" + "\nTemps de trajet : " + this.TempsTrajet;
+        }
     }
 }
 

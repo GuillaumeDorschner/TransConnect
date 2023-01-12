@@ -87,7 +87,7 @@ namespace TransConnect
 
         public override string ToString()
         {
-            return "Client : " + this.client.Nom + " " + this.client.Prenom + "\nLivraison : " + this.livraison.PointA + " - " + this.livraison.PointB + "\nPrix : " + this.prix + "€ \nVehicule : " + this.vehicule.ToString() + " \nChauffeur : " + this.chauffeur.Nom + " " + this.chauffeur.Prenom + " \nDate de livraison : " + this.dateLivraison + "\n";
+            return "Client : " + this.client.Nom + " " + this.client.Prenom + "\nPrix : " + this.prix + "€ \nVehicule : " + this.vehicule.ToString() + " \nChauffeur : " + this.chauffeur.Nom + " " + this.chauffeur.Prenom + " \nDate de livraison : " + this.dateLivraison + this.livraison.ToString() + "\n\n";
         }
 
     }
