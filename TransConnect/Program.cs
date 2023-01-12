@@ -18,12 +18,6 @@ namespace TransConnect
             Graph graph = new Graph("../../../data/distances.csv");
             List<Commande> listCommande = new List<Commande>();
 
-            Commande commande1 = new Commande(clientsList[0], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
-
-            listCommande.Add(commande1);
-
-
-
             mainMenu(Org, clientsList, listCommande, graph);
         }
 
