@@ -18,6 +18,12 @@ namespace TransConnect
             Graph graph = new Graph("../../../data/distances.csv");
             List<Commande> listCommande = new List<Commande>();
 
+
+            Commande commande1 = new Commande(clientsList[0], new Livraison(graph, "Lyon", "Rouen"), new Voiture("ABC"), Org.chauffeurLibre(new DateTime(2023, 1, 9)), new DateTime(2023, 1, 9));
+
+            listCommande.Add(commande1);
+
+
             mainMenu(Org, clientsList, listCommande, graph);
         }
 
@@ -55,7 +61,11 @@ namespace TransConnect
                     case 5:
                         try
                         {
-                            File.WriteAllText("../../../data/data.json", Newtonsoft.Json.JsonConvert.SerializeObject(org.Pdg, Formatting.Indented));
+                            // suppression des commandes des chauffeurs pour faire la sauvegarde
+                            Organigramme newOrg = org;
+                            newOrg.librerCommande();
+
+                            File.WriteAllText("../../../data/data.json", Newtonsoft.Json.JsonConvert.SerializeObject(newOrg.Pdg, Formatting.Indented));
                             Client.ObjToFile(listClients, "../../../data/dataClient.json");
                             Console.WriteLine("Fichiers sauvegardés avec succés");
                         }
@@ -438,7 +448,7 @@ namespace TransConnect
                         Console.WriteLine("Et la ville d'arrivée :");
                         string villeArrivee = Console.ReadLine();
 
-                        Commande modify = listCommandes.Find((Commande a) => a.Client.Nom == nomModify && a.Client.Prenom == prenomModify && a.Livraison.PointA==villeDepart && a.Livraison.PointB == villeArrivee);
+                        Commande modify = listCommandes.Find((Commande a) => a.Client.Nom == nomModify && a.Client.Prenom == prenomModify && a.Livraison.PointA == villeDepart && a.Livraison.PointB == villeArrivee);
                         if (modify == null) Console.WriteLine("Commande à modifier introuvable");
                         else
                         {
@@ -454,7 +464,7 @@ namespace TransConnect
                                     "1 : nom du client \n" +
                                     "2 : prénom du client\n" +
                                     "3 : ville de départ\n" +
-                                    "4 : ville d'arrivée \n" );
+                                    "4 : ville d'arrivée \n");
                                 int choix = Int32.Parse(Console.ReadLine());
 
                                 switch (choix)
@@ -485,7 +495,7 @@ namespace TransConnect
                                         if (newDepart != null)
                                         {
                                             modify.Livraison.PointA = newDepart;
-                                            modify = new Commande(modify.Client, new Livraison(graph, newDepart,modify.Livraison.PointB), modify.Vehicule, modify.Chauffeur, modify.DateLivraison);
+                                            modify = new Commande(modify.Client, new Livraison(graph, newDepart, modify.Livraison.PointB), modify.Vehicule, modify.Chauffeur, modify.DateLivraison);
                                             valide = true;
                                         }
                                         else Console.WriteLine("Aucune ville rentrée ");

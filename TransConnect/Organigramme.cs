@@ -256,6 +256,21 @@ namespace TransConnect
                 return tmp;
             return chauffeurLibre(date, temp.Enfant);
         }
+
+        public void librerCommande()
+        {
+            librerCommande(this.pdg);
+        }
+        private void librerCommande(Salarie temp)
+        {
+            if (temp != null)
+            {
+                temp.Commande = null;
+
+                librerCommande(temp.Frere);
+                librerCommande(temp.Enfant);
+            }
+        }
     }
 }
 

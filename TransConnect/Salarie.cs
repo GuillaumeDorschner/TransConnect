@@ -33,6 +33,7 @@ namespace TransConnect
         public Queue<Commande> Commande
         {
             get { return commande; }
+            set { commande = value; }
         }
 
         public override string ToString()
